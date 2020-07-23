@@ -15,3 +15,5 @@ Team two successes
 Team two blockers
 * Running server and client within the same project tree caused issues with file location and routing. 
 * Heroku currently hosts the server side
+
+* Travis change
