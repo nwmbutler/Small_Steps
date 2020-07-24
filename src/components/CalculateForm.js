@@ -9,6 +9,7 @@ export default class CalculateForm extends React.Component {
     this.state = { origin: '',
   destination: '',
   mode: '',
+  transit_mode: null,
   apiResponse: '',
   submitted: false,
   alternatives: false
@@ -16,7 +17,6 @@ export default class CalculateForm extends React.Component {
   }
 
 async callAPI(new_data) {
-  console.log(new_data)
       const response = await axios.post("http://localhost:5000/testAPI", { posted_data: new_data })
       console.log('Returned data:', response.data.distance);
       this.setState({ apiResponse: response.data.distance })
@@ -27,7 +27,6 @@ async callAPI(new_data) {
 
   handleInputChange = e => {
     this.setState({
-
       [e.target.name]: e.target.value,
     });
   };
@@ -37,15 +36,15 @@ async callAPI(new_data) {
     this.setState({
       submitted: !this.state.submitted,
     });
-    
-    
     const { origin, destination, mode } = this.state;
 
     const journey = {
       origin, destination, mode
     };
-
     this.callAPI(journey)
+    this.setState({
+      mode: 'transit',
+    });
   }
 
   handleButton = e => {
@@ -54,6 +53,14 @@ async callAPI(new_data) {
       alternatives: !this.state.alternatives
     });
     
+  }
+
+  alternativeSubmit = e => {
+    e.preventDefault();
+    this.setState({
+      apiResponse: null,
+      mode: "transit",
+    });
   }
 
 
@@ -88,9 +95,10 @@ async callAPI(new_data) {
 
 
 
+
       </select><br /><br />
 
-          <button type="submit">
+          <button>
                 Calculate
               </button>
               </form>
@@ -114,7 +122,17 @@ async callAPI(new_data) {
 
         return (
         <div>
-        Alternatives listed   
+        Choose your alternative transport mode
+        <select name = 'transit_mode' onChange={this.handleInputChange} value={this.state.transit_mode}>
+        <option value="null" ></option>
+        <option value="rail" >Rail</option>
+      </select><br /><br />
+
+      <button onClick={this.alternativeSubmit}>
+                Calculate
+      </button>
+
+
         </div>
 
 
