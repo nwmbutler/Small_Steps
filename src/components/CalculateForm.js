@@ -93,8 +93,6 @@ async callAPI(new_data) {
           <button type="submit">
                 Calculate
               </button>
-
-              <h3>{this.state.apiResponse} </h3>
               </form>
 
       );
@@ -108,7 +106,8 @@ async callAPI(new_data) {
 
         <button onClick={this.handleButton}>
         See Alternatives
-        </button>    
+        </button>
+        <h3>Your carbon footprint: {this.state.apiResponse} </h3>
         </div>
       )
       } else {
