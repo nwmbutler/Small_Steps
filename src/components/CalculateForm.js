@@ -14,8 +14,9 @@ export default class CalculateForm extends React.Component {
   }
 
 async callAPI(new_data) {
+  console.log(new_data)
       const response = await axios.post("http://localhost:5000/testAPI", { posted_data: new_data })
-      // console.log('Returned data:', response.data.distance);
+      console.log('Returned data:', response.data.distance);
       this.setState({ apiResponse: response.data.distance })
 
     } catch (e) {
