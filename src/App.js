@@ -7,7 +7,7 @@ class App extends Component {
         this.state = { apiResponse: "" };
     }
     callAPI() {
-        fetch("localhost:5000/testAPI")
+        fetch(`${process.env.REACT_APP_SERVER}`)
             .then(res => res.text())
             .then(res => this.setState({ apiResponse: res }))
             .catch(err => err);
