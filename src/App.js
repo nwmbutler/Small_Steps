@@ -7,7 +7,7 @@ class App extends Component {
         this.state = { apiResponse: "" };
     }
     callAPI() {
-        fetch("https://carbon-backend2.herokuapp.com/testAPI")
+        fetch("localhost:5000/testAPI")
             .then(res => res.text())
             .then(res => this.setState({ apiResponse: res }))
             .catch(err => err);
@@ -20,7 +20,7 @@ class App extends Component {
             <div className="App">
                 <header className="App-header">
                     <h1 className="App-title">Carbon Calculator</h1>
-                {/* <p className="App-intro">{this.state.apiResponse}</p> */}
+              ] <p className="App-intro">{this.state.apiResponse}</p>
                 </header>
             </div>
         );
