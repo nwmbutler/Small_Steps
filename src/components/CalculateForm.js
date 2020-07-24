@@ -9,7 +9,9 @@ export default class CalculateForm extends React.Component {
     this.state = { origin: '',
   destination: '',
   mode: '',
-  apiResponse: ''
+  apiResponse: '',
+  submitted: false,
+  alternatives: false
   };
   }
 
@@ -32,7 +34,11 @@ async callAPI(new_data) {
 
   handleSubmit = e => {
     e.preventDefault();
-
+    this.setState({
+      submitted: !this.state.submitted,
+    });
+    
+    
     const { origin, destination, mode } = this.state;
 
     const journey = {
@@ -42,9 +48,20 @@ async callAPI(new_data) {
     this.callAPI(journey)
   }
 
+  handleButton = e => {
+    e.preventDefault();
+    this.setState({
+      alternatives: !this.state.alternatives
+    });
+    
+  }
+
+
+
 
 
   render() {
+    if (this.state.submitted === false) {
       return (
         <form onSubmit={this.handleSubmit}>
         <h1>Carbon Calculator</h1><br />
@@ -81,5 +98,31 @@ async callAPI(new_data) {
               </form>
 
       );
+    } else {
+      if (this.state.alternatives == false){
+      return (
+        <div>
+        <button onClick={this.handleSubmit}>
+                New Journey
+              </button>
+
+        <button onClick={this.handleButton}>
+        See Alternatives
+        </button>    
+        </div>
+      )
+      } else {
+
+        return (
+        <div>
+        Alternatives listed   
+        </div>
+
+
+        )
+      }
+    }
+
+
     }
   }
