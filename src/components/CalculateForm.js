@@ -2,9 +2,6 @@ import React from 'react';
 import axios from 'axios';
 import "./Form.css";
 
-var production = process.env.NODE_ENV;
-console.log(production)
-
 export default class CalculateForm extends React.Component {
   constructor(props) {
     super(props);
@@ -17,7 +14,7 @@ export default class CalculateForm extends React.Component {
   }
 
 async callAPI(new_data) {
-      const response = await axios.post("https://carbon-backend2.herokuapp.com/testAPI", { posted_data: new_data })
+      const response = await axios.post("https://backend2.herokuapp.com/testAPI", { posted_data: new_data })
       // console.log('Returned data:', response.data.distance);
       this.setState({ apiResponse: response.data.distance })
 
