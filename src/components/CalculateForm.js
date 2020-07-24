@@ -17,7 +17,7 @@ export default class CalculateForm extends React.Component {
   }
 
 async callAPI(new_data) {
-      const response = await axios.post(`${process.env.REACT_APP_SERVER}`, { posted_data: new_data })
+      const response = await axios.post("https://carbon-backend2.herokuapp.com/testAPI", { posted_data: new_data })
       // console.log('Returned data:', response.data.distance);
       this.setState({ apiResponse: response.data.distance })
 
