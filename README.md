@@ -27,11 +27,11 @@ Team successes
 * Knowledge shared state of current project
 
 Team blockers
-* Adherence to Team charter raised as concern,working patterns addressed and revised - monitor
+* Adherence to Team charter raised as concern, working patterns addressed and revised - monitor
 * Actions required
 
 # Using this code
-### This repo needs cloning and running of the back end to work correctly.
+### This repo needs cloning and running for the back end to work correctly.
 [link to Back End](https://github.com/nwmbutler/carbon-back-end)
 
 ```
