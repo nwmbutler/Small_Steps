@@ -38,9 +38,11 @@ Team blockers
 clone this repo
 ```
 ```
-clone [link to Back End](https://github.com/nwmbutler/carbon-back-end) into a
+clone
+```
+[link to Back End](https://github.com/nwmbutler/carbon-back-end) into a
  different directory
- ```
+
 ### These three instructions are identical, but perform them in backend root first.
 
 * In the root run
