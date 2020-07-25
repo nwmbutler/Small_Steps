@@ -1,7 +1,8 @@
 import React from 'react';
 import axios from 'axios';
 import "./Form.css";
-import { config } from '../Constants'
+import { config } from '../Constants';
+import Button from 'react-bootstrap/Button';
 
 var url = config.url.API_URL
 
@@ -9,21 +10,22 @@ export default class CalculateForm extends React.Component {
   constructor(props) {
     super(props);
 
-    this.state = { origin: '',
-  destination: '',
-  mode: '',
-  apiResponse: ''
-  };
+    this.state = {
+      origin: '',
+      destination: '',
+      mode: '',
+      apiResponse: ''
+    };
   }
 
-async callAPI(new_data) {
-      const response = await axios.post(`${url}`, { posted_data: new_data })
-      // console.log('Returned data:', response.data.distance);
-      this.setState({ apiResponse: response.data.distance })
+  async callAPI(new_data) {
+    const response = await axios.post(`${url}`, { posted_data: new_data })
+    // console.log('Returned data:', response.data.distance);
+    this.setState({ apiResponse: response.data.distance })
 
-    } catch (e) {
-      console.log(`Axios request failed: ${e}`);
-}
+  } catch(e) {
+    console.log(`Axios request failed: ${e}`);
+  }
 
   handleInputChange = e => {
     this.setState({
@@ -47,41 +49,41 @@ async callAPI(new_data) {
 
 
   render() {
-      return (
-        <form onSubmit={this.handleSubmit}>
+    return (
+      <form onSubmit={this.handleSubmit}>
         <h1>Carbon Calculator</h1><br />
-          <input
-            type="text"
-            name="origin"
-            placeholder='Choose starting point...'
-            onChange={this.handleInputChange}
-          /><br />
-          <br />
-          <input
-            type="text"
-            name = 'destination'
-            placeholder='Choose destination...'
-            onChange={this.handleInputChange}
-          /><br />
-          <br />
+        <input
+          type="text"
+          name="origin"
+          placeholder='Choose starting point...'
+          onChange={this.handleInputChange}
+        /><br />
+        <br />
+        <input
+          type="text"
+          name='destination'
+          placeholder='Choose destination...'
+          onChange={this.handleInputChange}
+        /><br />
+        <br />
 
-        <select name = 'mode' onChange={this.handleInputChange} value={this.state.mode}>
-        <option value="null" ></option>
-        <option value="driving" >Car</option>
-        <option value="bicycling" >Bike</option>
-        <option value="walking" >Walk</option>
+        <select name='mode' onChange={this.handleInputChange} value={this.state.mode}>
+          <option value="null" ></option>
+          <option value="driving" >Car</option>
+          <option value="bicycling" >Bike</option>
+          <option value="walking" >Walk</option>
 
 
 
-      </select><br /><br />
+        </select><br /><br />
 
-          <button type="submit">
-                Calculate
-              </button>
+        <Button variant="success" type="submit">
+          Calculate
+        </Button>
 
-              <h3>{this.state.apiResponse} </h3>
-              </form>
+        <h3>{this.state.apiResponse} </h3>
+      </form>
 
-      );
-    }
+    );
   }
+}
