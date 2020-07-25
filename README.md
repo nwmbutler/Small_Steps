@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/nwmbutler/carbon-front-end.svg?branch=master)](https://travis-ci.org/nwmbutler/carbon-front-end)
+
 # Carbon Calculator
 travis added
 
