@@ -1,7 +1,7 @@
 import React from 'react';
 import axios from 'axios';
 import "./Form.css";
-
+import AlternativesForm from "./AlternativesForm.js";
 export default class CalculateForm extends React.Component {
   constructor(props) {
     super(props);
@@ -56,6 +56,7 @@ async callAPI(new_data) {
   }
 
   alternativeSubmit = e => {
+    alert(this.state.mode)
     e.preventDefault();
     this.setState({
       apiResponse: null,
@@ -69,9 +70,10 @@ async callAPI(new_data) {
 
   render() {
     if (this.state.submitted === false) {
-      return (
+      return(
         <form onSubmit={this.handleSubmit}>
-        <h1>Carbon Calculator</h1><br />
+          
+        
           <input
             type="text"
             name="origin"
@@ -106,7 +108,7 @@ async callAPI(new_data) {
       );
     } else {
       if (this.state.alternatives == false){
-      return (
+      return(
         <div>
         <button onClick={this.handleSubmit}>
                 New Journey
@@ -117,23 +119,14 @@ async callAPI(new_data) {
         </button>
         <h3>Your carbon footprint: {this.state.apiResponse} </h3>
         </div>
-      )
+      );
       } else {
 
-        return (
-        <div>
-        Choose your alternative transport mode
-        <select name = 'transit_mode' onChange={this.handleInputChange} value={this.state.transit_mode}>
-        <option value="null" ></option>
-        <option value="rail" >Rail</option>
-      </select><br /><br />
-
-      <button onClick={this.alternativeSubmit}>
-                Calculate
-      </button>
-
-
-        </div>
+        return(
+          
+          <div> 
+          <AlternativesForm alternativeSubmit = {this.alternativeSubmit} handleInputChange= {this.handleInputChange} transit_mode = {this.state.transit_mode}   />
+          </div>
 
 
         )
