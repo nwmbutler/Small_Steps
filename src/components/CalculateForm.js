@@ -51,14 +51,13 @@ export default class CalculateForm extends React.Component {
   render() {
     return (
       <form onSubmit={this.handleSubmit}>
-        <h1>Carbon Calculator</h1><br />
+        <h2>Carbon Calculator</h2>
         <input
           type="text"
           name="origin"
           placeholder='Choose starting point...'
           onChange={this.handleInputChange}
         /><br />
-        <br />
         <input
           type="text"
           name='destination'
@@ -83,7 +82,6 @@ export default class CalculateForm extends React.Component {
 
         <h3>{this.state.apiResponse} </h3>
       </form>
-
     );
   }
 }
