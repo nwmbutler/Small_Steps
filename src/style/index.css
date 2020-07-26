@@ -23,10 +23,12 @@ article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
 .navbar {
   background-color: rgb(2, 176, 182);
   font-family: 'Lobster Two', cursive;
+  opacity: 0.9;
 }
 
 .copyright {
   height: 10px;
   background-color:rgb(2, 176, 182);
   padding-bottom: 5px;
+  opacity: 0.9;
 }
