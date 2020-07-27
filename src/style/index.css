@@ -24,6 +24,12 @@ code {
   padding: 5px;
 }
 
+.alternative {
+
+  margin: 100px;
+
+}
+
 .navbar {
   font-family: 'Lobster Two', cursive;
 }
