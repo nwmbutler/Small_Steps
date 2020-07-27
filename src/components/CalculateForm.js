@@ -5,6 +5,7 @@ import { Form } from 'react-bootstrap';
 import GenericForm from './GenericForm';
 import AirplaneForm from './AirplaneForm';
 import TrainForm from './TrainForm';
+import CarForm from './CarForm';
 export default class CalculateForm extends React.Component {
   render() {
     if (this.props.mode == 'airplane') {
@@ -20,6 +21,14 @@ export default class CalculateForm extends React.Component {
         handleInputChange={this.props.handleInputChange}
       />
     );
+    }
+    else if (this.props.mode == 'driving') {
+      return (
+        <CarForm
+          handleSubmit={this.props.handleSubmit}
+          handleInputChange={this.props.handleInputChange}
+        />
+      );
     }
     else {
       return (
