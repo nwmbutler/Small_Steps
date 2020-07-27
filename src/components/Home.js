@@ -60,7 +60,7 @@ export default class Home extends React.Component {
     e.preventDefault();
     this.setState({
       showAlternativesForm: !this.state.showAlternativesForm,
-      apiResponse: null
+      apiResponse: null,
     });
   };
 
@@ -79,7 +79,7 @@ export default class Home extends React.Component {
     this.callAPI(journey, 'http://localhost:5000/transportAlternative');
     this.setState({
       showAlternativesForm: false,
-      showResults: true
+      showResults: true,
     });
   };
 
@@ -97,7 +97,7 @@ export default class Home extends React.Component {
       return (
         <div>
           <AlternativesForm
-            apiResponse = {this.state.apiResponse}
+            apiResponse={this.state.apiResponse}
             alternativeSubmit={this.alternativeSubmit}
             handleInputChange={this.handleInputChange}
             transit_mode={this.state.transit_mode}
