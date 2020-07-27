@@ -60,6 +60,7 @@ export default class Home extends React.Component {
     e.preventDefault();
     this.setState({
       showAlternativesForm: !this.state.showAlternativesForm,
+      apiResponse: null
     });
   };
 
