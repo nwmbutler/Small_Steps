@@ -16,12 +16,12 @@ export default class Home extends React.Component {
       apiResponse: '',
       showOriginalForm: true,
       showAlternativesForm: false,
-      showResults: false
+      showResults: false,
     };
   }
 
   async callAPI(new_data, url) {
-    const response = await axios.post(url , {
+    const response = await axios.post(url, {
       posted_data: new_data,
     });
     console.log('Returned data:', response.data.distance);
@@ -41,7 +41,7 @@ export default class Home extends React.Component {
     e.preventDefault();
     this.setState({
       showOriginalForm: !this.state.showOriginalForm,
-      showResults: true
+      showResults: true,
     });
     const { origin, destination, mode } = this.state;
 
@@ -64,12 +64,22 @@ export default class Home extends React.Component {
   };
 
   alternativeSubmit = (e) => {
-    alert(this.state.mode);
+    // alert(this.state.mode);
     e.preventDefault();
-    this.setState({
-      apiResponse: null,
-      mode: 'transit',
-    });
+    const { origin, destination, mode, transit_mode } = this.state;
+
+    const journey = {
+      origin,
+      destination,
+      mode,
+      transit_mode,
+    };
+
+    alert(journey.transit_mode)
+
+
+    this.callAPI(journey, 'http://localhost:5000/transportAlternative');
+    
   };
 
   render() {
@@ -86,6 +96,7 @@ export default class Home extends React.Component {
       return (
         <div>
           <AlternativesForm
+            apiResponse = {this.state.apiResponse}
             alternativeSubmit={this.alternativeSubmit}
             handleInputChange={this.handleInputChange}
             transit_mode={this.state.transit_mode}
