@@ -24,9 +24,9 @@ export default class DisplayResults extends React.Component {
               </div>
             )}
           {this.props.originalEmissionResult && (
-          <div>
-           <h3>Your old carbon footprint: {this.props.originalEmissionResult} </h3>
-          </div>
+            <div>
+              <span class="d-block bg-white">Your old carbon footprint: {this.props.originalEmissionResult} </span>
+            </div>
           )}
         </Container>
       </div>
