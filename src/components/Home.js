@@ -95,16 +95,10 @@ export default class Home extends React.Component {
       return (
         <div>
           <div>
-            <Navbar />
-          </div>
-          <div>
             <CalculateForm
               handleSubmit={this.handleSubmit}
               handleInputChange={this.handleInputChange}
             />
-          </div>
-          <div>
-            <Footer />
           </div>
         </div>
       );
@@ -114,17 +108,11 @@ export default class Home extends React.Component {
       return (
         <div>
           <div>
-            <Navbar />
-          </div>
-          <div>
             <AlternativesForm
               alternativeSubmit={this.alternativeSubmit}
               handleInputChange={this.handleInputChange}
               transit_mode={this.state.transit_mode}
             />
-          </div>
-          <div>
-            <Footer />
           </div>
         </div>
       );
@@ -134,18 +122,12 @@ export default class Home extends React.Component {
       return (
         <div>
           <div>
-            <Navbar />
-          </div>
-          <div>
             <DisplayResults
               handleSubmit={this.handleSubmit}
               handleButton={this.handleButton}
               currentEmissionResult={this.state.currentEmissionResult}
               originalEmissionResult={this.state.originalEmissionResult}
             />
-          </div>
-          <div>
-            <Footer />
           </div>
         </div>
       );
