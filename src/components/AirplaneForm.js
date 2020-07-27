@@ -2,7 +2,7 @@ import React from 'react';
 import Button from 'react-bootstrap/Button';
 import { Form } from 'react-bootstrap';
 
-export default class GenericForm extends React.Component {
+export default class AirplaneForm extends React.Component {
   render() {
     return (
       <div>
@@ -13,7 +13,7 @@ export default class GenericForm extends React.Component {
             <Form.Control
               type="text"
               name="origin"
-              placeholder="Choose starting point..."
+              placeholder="Choose Departure Airport "
               onChange={this.props.handleInputChange}
             />
           </Form.Group>
@@ -22,7 +22,7 @@ export default class GenericForm extends React.Component {
             <Form.Control
               type="text"
               name="destination"
-              placeholder="Choose destination..."
+              placeholder="Choose Arrival Airport"
               onChange={this.props.handleInputChange}
             />
           </Form.Group>
@@ -34,7 +34,7 @@ export default class GenericForm extends React.Component {
             <option value="walking">Walk</option>
             <option value="bus">Bus</option>
             <option value="train">Train</option>
-            <option value="airplane">Airplane</option>
+            <option value="airplane" selected>Airplane</option>
           </Form.Control>
         </Form.Group>
 

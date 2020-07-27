@@ -97,6 +97,7 @@ export default class Home extends React.Component {
             <CalculateForm
               handleSubmit={this.handleSubmit}
               handleInputChange={this.handleInputChange}
+              mode = {this.state.mode}
             />
           </div>
         </div>
