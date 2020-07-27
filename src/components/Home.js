@@ -13,7 +13,7 @@ export default class Home extends React.Component {
       destination: '',
       mode: '',
       transit_mode: null,
-      apiResponse: '',
+      apiResponse: null,
       showOriginalForm: true,
       showAlternativesForm: false,
       showResults: false,
