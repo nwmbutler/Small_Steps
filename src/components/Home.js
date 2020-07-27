@@ -76,11 +76,11 @@ export default class Home extends React.Component {
       transit_mode,
     };
 
-    alert(journey.transit_mode)
-
-
     this.callAPI(journey, 'http://localhost:5000/transportAlternative');
-    
+    this.setState({
+      showAlternativesForm: false,
+      showResults: true
+    });
   };
 
   render() {

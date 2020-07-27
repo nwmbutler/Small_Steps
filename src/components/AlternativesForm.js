@@ -19,9 +19,6 @@ export default class AlternativesForm extends React.Component {
         <br />
         <br />
         <button onClick={this.props.alternativeSubmit}>Calculate</button>
-        {this.props.apiResponse && (
-        <h3>Your carbon footprint: {this.props.apiResponse} </h3>
-        )}
       </div>
     );
   }
