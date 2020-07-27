@@ -50,7 +50,7 @@ export default class CalculateForm extends React.Component {
 
   render() {
     return (
-      <form onSubmit={this.handleSubmit}>
+      <form class="calculator" onSubmit={this.handleSubmit}>
         <h2>Carbon Calculator</h2>
         <input
           type="text"

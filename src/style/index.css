@@ -17,6 +17,15 @@ code {
     monospace;
 }
 
+.calculator{
+  background-color: white;
+  border-radius: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-bottom: 10px;
+  top: 100px;
+}
+
 .navbar {
   background-color: rgb(86, 202, 202);
   font-family: 'Lobster Two', cursive;
