@@ -1,10 +1,10 @@
 import React from 'react';
 import './Form.css';
-import GenericForm from './GenericForm';
-import AirplaneForm from './AirplaneForm';
-import TrainForm from './TrainForm';
-import CarForm from './CarForm';
-import BusForm from './BusForm';
+import GenericForm from './Form/GenericForm';
+import AirplaneForm from './Form/AirplaneForm';
+import TrainForm from './Form/TrainForm';
+import CarForm from './Form/CarForm';
+import BusForm from './Form/BusForm';
 export default class CalculateForm extends React.Component {
   render() {
     if (this.props.mode === 'airplane') {
