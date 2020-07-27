@@ -4,6 +4,8 @@ import './Form.css';
 import AlternativesForm from './AlternativesForm.js';
 import DisplayResults from './DisplayResults.js';
 import CalculateForm from './CalculateForm.js';
+import Navbar from './Navbar';
+import Footer from './Footer';
 export default class Home extends React.Component {
   constructor(props) {
     super(props);
@@ -43,7 +45,7 @@ export default class Home extends React.Component {
     this.setState({
       showOriginalForm: !this.state.showOriginalForm,
       showResults: true,
-      originalEmissionResult : null
+      originalEmissionResult: null,
     });
     const { origin, destination, mode } = this.state;
 
@@ -80,7 +82,7 @@ export default class Home extends React.Component {
     this.setState({
       originalEmissionResult: this.state.currentEmissionResult,
     });
-    alert(this.state.originalEmissionResult)
+    alert(this.state.originalEmissionResult);
     this.callAPI(journey, 'http://localhost:5000/transportAlternative');
     this.setState({
       showAlternativesForm: false,
@@ -91,21 +93,39 @@ export default class Home extends React.Component {
   render() {
     if (this.state.showOriginalForm) {
       return (
-        <CalculateForm
-          handleSubmit={this.handleSubmit}
-          handleInputChange={this.handleInputChange}
-        />
+        <div>
+          <div>
+            <Navbar />
+          </div>
+          <div>
+            <CalculateForm
+              handleSubmit={this.handleSubmit}
+              handleInputChange={this.handleInputChange}
+            />
+          </div>
+          <div>
+            <Footer />
+          </div>
+        </div>
       );
     }
 
     if (this.state.showAlternativesForm) {
       return (
         <div>
-          <AlternativesForm
-            alternativeSubmit={this.alternativeSubmit}
-            handleInputChange={this.handleInputChange}
-            transit_mode={this.state.transit_mode}
-          />
+          <div>
+            <Navbar />
+          </div>
+          <div>
+            <AlternativesForm
+              alternativeSubmit={this.alternativeSubmit}
+              handleInputChange={this.handleInputChange}
+              transit_mode={this.state.transit_mode}
+            />
+          </div>
+          <div>
+            <Footer />
+          </div>
         </div>
       );
     }
@@ -113,12 +133,20 @@ export default class Home extends React.Component {
     if (this.state.showResults) {
       return (
         <div>
-          <DisplayResults
-            handleSubmit={this.handleSubmit}
-            handleButton={this.handleButton}
-            currentEmissionResult={this.state.currentEmissionResult}
-            originalEmissionResult = {this.state.originalEmissionResult}
-          />
+          <div>
+            <Navbar />
+          </div>
+          <div>
+            <DisplayResults
+              handleSubmit={this.handleSubmit}
+              handleButton={this.handleButton}
+              currentEmissionResult={this.state.currentEmissionResult}
+              originalEmissionResult={this.state.originalEmissionResult}
+            />
+          </div>
+          <div>
+            <Footer />
+          </div>
         </div>
       );
     }
