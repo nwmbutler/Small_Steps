@@ -5,7 +5,7 @@ export default class AlternativesForm extends React.Component {
   render() {
     return (
       <div>
-        {this.props.apiResponse}
+        
         Choose your alternative transport mode
         <select
           name="transit_mode"
@@ -19,6 +19,9 @@ export default class AlternativesForm extends React.Component {
         <br />
         <br />
         <button onClick={this.props.alternativeSubmit}>Calculate</button>
+        {this.props.apiResponse && (
+        <h3>Your carbon footprint: {this.props.apiResponse} </h3>
+        )}
       </div>
     );
   }
