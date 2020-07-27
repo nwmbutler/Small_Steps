@@ -4,6 +4,7 @@ import './Form.css';
 import AlternativesForm from './AlternativesForm.js';
 import DisplayResults from './DisplayResults.js';
 import CalculateForm from './CalculateForm.js';
+
 export default class Home extends React.Component {
   constructor(props) {
     super(props);
@@ -13,7 +14,8 @@ export default class Home extends React.Component {
       destination: '',
       mode: '',
       transit_mode: null,
-      apiResponse: null,
+      currentEmissionResult: null,
+      originalEmissionResult: null,
       showOriginalForm: true,
       showAlternativesForm: false,
       showResults: false,
@@ -25,7 +27,7 @@ export default class Home extends React.Component {
       posted_data: new_data,
     });
     console.log('Returned data:', response.data.distance);
-    this.setState({ apiResponse: response.data.distance });
+    this.setState({ currentEmissionResult: response.data.distance });
   }
   catch(e) {
     console.log(`Axios request failed: ${e}`);
@@ -42,6 +44,7 @@ export default class Home extends React.Component {
     this.setState({
       showOriginalForm: !this.state.showOriginalForm,
       showResults: true,
+      originalEmissionResult: null,
     });
     const { origin, destination, mode } = this.state;
 
@@ -58,15 +61,14 @@ export default class Home extends React.Component {
 
   handleButton = (e) => {
     e.preventDefault();
-    alert('here')
     this.setState({
       showAlternativesForm: !this.state.showAlternativesForm,
-      apiResponse: null,
     });
   };
 
   alternativeSubmit = (e) => {
     // alert(this.state.mode);
+
     e.preventDefault();
     const { origin, destination, mode, transit_mode } = this.state;
 
@@ -76,7 +78,10 @@ export default class Home extends React.Component {
       mode,
       transit_mode,
     };
-
+    this.setState({
+      originalEmissionResult: this.state.currentEmissionResult,
+    });
+    alert(this.state.originalEmissionResult);
     this.callAPI(journey, 'http://localhost:5000/transportAlternative');
     this.setState({
       showAlternativesForm: false,
@@ -87,22 +92,27 @@ export default class Home extends React.Component {
   render() {
     if (this.state.showOriginalForm) {
       return (
-        <CalculateForm
-          handleSubmit={this.handleSubmit}
-          handleInputChange={this.handleInputChange}
-        />
+        <div>
+          <div>
+            <CalculateForm
+              handleSubmit={this.handleSubmit}
+              handleInputChange={this.handleInputChange}
+            />
+          </div>
+        </div>
       );
     }
 
     if (this.state.showAlternativesForm) {
       return (
         <div>
-          <AlternativesForm
-            apiResponse={this.state.apiResponse}
-            alternativeSubmit={this.alternativeSubmit}
-            handleInputChange={this.handleInputChange}
-            transit_mode={this.state.transit_mode}
-          />
+          <div>
+            <AlternativesForm
+              alternativeSubmit={this.alternativeSubmit}
+              handleInputChange={this.handleInputChange}
+              transit_mode={this.state.transit_mode}
+            />
+          </div>
         </div>
       );
     }
@@ -110,11 +120,14 @@ export default class Home extends React.Component {
     if (this.state.showResults) {
       return (
         <div>
-          <DisplayResults
-            handleSubmit={this.handleSubmit}
-            handleButton={this.handleButton}
-            apiResponse={this.state.apiResponse}
-          />
+          <div>
+            <DisplayResults
+              handleSubmit={this.handleSubmit}
+              handleButton={this.handleButton}
+              currentEmissionResult={this.state.currentEmissionResult}
+              originalEmissionResult={this.state.originalEmissionResult}
+            />
+          </div>
         </div>
       );
     }

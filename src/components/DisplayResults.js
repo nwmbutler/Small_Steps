@@ -4,6 +4,7 @@ import Container from 'react-bootstrap/Container';
 export default class DisplayResults extends React.Component {
   render() {
     return (
+
       <div class="display">
         <Container>
           <Button variant="success" onClick={this.props.handleSubmit}>New Journey</Button>
@@ -15,15 +16,21 @@ export default class DisplayResults extends React.Component {
         <Container>
           {this.props.apiResponse ? (
             <div>
-              <span class="d-block bg-white">Your carbon footprint: {this.props.apiResponse}</span>
+              <span class="d-block bg-white">Your carbon footprint: {this.props.currentEmissionResult}</span>
             </div>
           ) : (
               <div>
                 <h3>Calculating your journey</h3>
               </div>
-            )}
+            )
+          {this.props.originalEmissionResult && (
+          <div>
+           <h3>Your old carbon footprint: {this.props.originalEmissionResult} </h3>
+          </div>
+          )}
         </Container>
       </div>
+
     );
   }
 }
