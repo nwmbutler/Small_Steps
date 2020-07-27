@@ -81,7 +81,7 @@ export default class Home extends React.Component {
     this.setState({
       originalEmissionResult: this.state.currentEmissionResult,
     });
-    alert(this.state.originalEmissionResult);
+    // alert(this.state.originalEmissionResult);
     this.callAPI(journey, 'http://localhost:5000/transportAlternative');
     this.setState({
       showAlternativesForm: false,
