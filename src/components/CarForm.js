@@ -47,7 +47,7 @@ export default class CarForm extends React.Component {
           <Form.Group controlId="dropDown">
             <Form.Control as="select" name="mode">
               <option hidden>Car Type</option>
-              <option value="big" selected>
+              <option value="big" >
                 Big
               </option>
             </Form.Control>

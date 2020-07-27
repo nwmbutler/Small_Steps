@@ -1,7 +1,5 @@
 import React from 'react';
 import './Form.css';
-import Button from 'react-bootstrap/Button';
-import { Form } from 'react-bootstrap';
 import GenericForm from './GenericForm';
 import AirplaneForm from './AirplaneForm';
 import TrainForm from './TrainForm';
