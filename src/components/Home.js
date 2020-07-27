@@ -16,6 +16,7 @@ export default class Home extends React.Component {
       apiResponse: '',
       showOriginalForm: true,
       showAlternativesForm: false,
+      showResults: false
     };
   }
 
@@ -40,6 +41,7 @@ export default class Home extends React.Component {
     e.preventDefault();
     this.setState({
       showOriginalForm: !this.state.showOriginalForm,
+      showResults: true
     });
     const { origin, destination, mode } = this.state;
 
@@ -71,35 +73,37 @@ export default class Home extends React.Component {
   };
 
   render() {
-    if (this.state.showOriginalForm  === true) {
+    if (this.state.showOriginalForm) {
       return (
         <CalculateForm
-        handleSubmit={this.handleSubmit}
-        handleInputChange={this.handleInputChange}
-      />
+          handleSubmit={this.handleSubmit}
+          handleInputChange={this.handleInputChange}
+        />
       );
-    } else {
-      if (this.state.showAlternativesForm === false) {
-        return (
-          <div>
-            <DisplayResults
-              handleSubmit={this.handleSubmit}
-              handleButton={this.handleButton}
-              apiResponse={this.state.apiResponse}
-            />
-          </div>
-        );
-      } else {
-        return (
-          <div>
-            <AlternativesForm
-              alternativeSubmit={this.alternativeSubmit}
-              handleInputChange={this.handleInputChange}
-              transit_mode={this.state.transit_mode}
-            />
-          </div>
-        );
-      }
+    }
+
+    if (this.state.showAlternativesForm) {
+      return (
+        <div>
+          <AlternativesForm
+            alternativeSubmit={this.alternativeSubmit}
+            handleInputChange={this.handleInputChange}
+            transit_mode={this.state.transit_mode}
+          />
+        </div>
+      );
+    }
+
+    if (this.state.showResults) {
+      return (
+        <div>
+          <DisplayResults
+            handleSubmit={this.handleSubmit}
+            handleButton={this.handleButton}
+            apiResponse={this.state.apiResponse}
+          />
+        </div>
+      );
     }
   }
 }

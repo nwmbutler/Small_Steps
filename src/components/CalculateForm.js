@@ -5,7 +5,7 @@ export default class CalculateForm extends React.Component {
   render() {
     return (
       <div>
-       <form onSubmit={this.props.handleSubmit}>
+        <form onSubmit={this.props.handleSubmit}>
           <input
             type="text"
             name="origin"
@@ -23,11 +23,7 @@ export default class CalculateForm extends React.Component {
           <br />
           <br />
 
-          <select
-            name="mode"
-            onChange={this.props.handleInputChange}
-          
-          >
+          <select name="mode" onChange={this.props.handleInputChange}>
             <option value="null"></option>
             <option value="driving">Car</option>
             <option value="bicycling">Bike</option>
