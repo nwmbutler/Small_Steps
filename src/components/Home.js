@@ -13,7 +13,8 @@ export default class Home extends React.Component {
       destination: '',
       mode: '',
       transit_mode: null,
-      firstEmissionResult: null,
+      currentEmissionResult: null,
+
       showOriginalForm: true,
       showAlternativesForm: false,
       showResults: false,
@@ -25,7 +26,7 @@ export default class Home extends React.Component {
       posted_data: new_data,
     });
     console.log('Returned data:', response.data.distance);
-    this.setState({ firstEmissionResult: response.data.distance });
+    this.setState({ currentEmissionResult: response.data.distance });
   }
   catch(e) {
     console.log(`Axios request failed: ${e}`);
@@ -61,7 +62,7 @@ export default class Home extends React.Component {
     alert('here')
     this.setState({
       showAlternativesForm: !this.state.showAlternativesForm,
-      apiResponse: null,
+      currentEmissionResult: null,
     });
   };
 
@@ -112,7 +113,7 @@ export default class Home extends React.Component {
           <DisplayResults
             handleSubmit={this.handleSubmit}
             handleButton={this.handleButton}
-            firstEmissionResult={this.state.firstEmissionResult}
+            currentEmissionResult={this.state.currentEmissionResult}
           />
         </div>
       );
