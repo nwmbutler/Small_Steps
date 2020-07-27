@@ -1,11 +1,12 @@
 import React from 'react';
+import Button from 'react-bootstrap/Button';
 
 
 export default class AlternativesForm extends React.Component {
   render() {
     return (
       <div>
-        
+
         Choose your alternative transport mode
         <select
           name="transit_mode"
@@ -18,7 +19,7 @@ export default class AlternativesForm extends React.Component {
         </select>
         <br />
         <br />
-        <button onClick={this.props.alternativeSubmit}>Calculate</button>
+        <Button variant="success" onClick={this.props.alternativeSubmit}>Calculate</Button>
       </div>
     );
   }

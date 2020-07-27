@@ -1,27 +1,36 @@
 import React from 'react';
-
+import Button from 'react-bootstrap/Button';
+import Container from 'react-bootstrap/Container';
 export default class DisplayResults extends React.Component {
   render() {
     return (
-      <div>
-        <button onClick={this.props.handleSubmit}>New Journey</button>
-        <button onClick={this.props.handleButton}>See Alternatives</button>
-        {this.props.currentEmissionResult ? (
-          <div>
-            <h3>Your carbon footprint: {this.props.currentEmissionResult} </h3>
-          </div>
-        ) : (
-          <div>
-            <h3>Calculating your journey</h3>
-          </div>
-        )}
-           
+
+      <div class="display">
+        <Container>
+          <Button variant="success" onClick={this.props.handleSubmit}>New Journey</Button>
+        </Container><br />
+        <Container>
+          <Button variant="success" onClick={this.props.handleButton}>See Alternatives</Button>
+        </Container>
+        <br />
+        <Container>
+          {this.props.apiResponse ? (
+            <div>
+              <span class="d-block bg-white">Your carbon footprint: {this.props.currentEmissionResult}</span>
+            </div>
+          ) : (
+              <div>
+                <h3>Calculating your journey</h3>
+              </div>
+            )
           {this.props.originalEmissionResult && (
           <div>
            <h3>Your old carbon footprint: {this.props.originalEmissionResult} </h3>
-         </div>
+          </div>
           )}
+        </Container>
       </div>
+
     );
   }
 }

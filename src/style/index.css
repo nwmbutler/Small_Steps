@@ -17,6 +17,13 @@ code {
     monospace;
 }
 
+.display {
+  margin: 100px;
+}
+.d-block {
+  padding: 5px;
+}
+
 .navbar {
   font-family: 'Lobster Two', cursive;
 }
