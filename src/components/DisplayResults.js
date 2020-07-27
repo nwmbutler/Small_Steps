@@ -14,7 +14,7 @@ export default class DisplayResults extends React.Component {
         </Container>
         <br />
         <Container>
-          {this.props.apiResponse ? (
+          {this.props.currentEmissionResult? (
             <div>
               <span class="d-block bg-white">Your carbon footprint: {this.props.currentEmissionResult}</span>
             </div>
