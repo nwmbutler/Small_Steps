@@ -20,8 +20,8 @@ export default class Home extends React.Component {
     };
   }
 
-  async callAPI(new_data) {
-    const response = await axios.post('http://localhost:5000/testAPI', {
+  async callAPI(new_data, url) {
+    const response = await axios.post(url , {
       posted_data: new_data,
     });
     console.log('Returned data:', response.data.distance);
@@ -50,7 +50,7 @@ export default class Home extends React.Component {
       destination,
       mode,
     };
-    this.callAPI(journey);
+    this.callAPI(journey, 'http://localhost:5000/testAPI');
     this.setState({
       mode: 'transit',
     });

@@ -28,6 +28,8 @@ export default class CalculateForm extends React.Component {
             <option value="driving">Car</option>
             <option value="bicycling">Bike</option>
             <option value="walking">Walk</option>
+            <option value="bus">Bus</option>
+            <option value="train">Train</option>
           </select>
           <br />
           <br />
