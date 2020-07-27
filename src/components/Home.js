@@ -58,6 +58,7 @@ export default class Home extends React.Component {
 
   handleButton = (e) => {
     e.preventDefault();
+    alert('here')
     this.setState({
       showAlternativesForm: !this.state.showAlternativesForm,
       apiResponse: null,
