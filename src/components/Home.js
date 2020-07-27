@@ -4,8 +4,7 @@ import './Form.css';
 import AlternativesForm from './AlternativesForm.js';
 import DisplayResults from './DisplayResults.js';
 import CalculateForm from './CalculateForm.js';
-import Navbar from './Navbar';
-import Footer from './Footer';
+
 export default class Home extends React.Component {
   constructor(props) {
     super(props);
