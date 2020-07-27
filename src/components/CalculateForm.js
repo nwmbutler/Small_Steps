@@ -3,6 +3,7 @@ import axios from 'axios';
 import "./Form.css";
 import { config } from '../Constants';
 import Button from 'react-bootstrap/Button';
+import { Form } from 'react-bootstrap';
 
 var url = config.url.API_URL
 
@@ -46,42 +47,37 @@ export default class CalculateForm extends React.Component {
     this.callAPI(journey)
   }
 
-
-
   render() {
     return (
-      <form class="calculator" onSubmit={this.handleSubmit}>
-        <h2>Carbon Calculator</h2>
-        <input
-          type="text"
-          name="origin"
-          placeholder='Choose starting point...'
-          onChange={this.handleInputChange}
-        /><br />
-        <input
-          type="text"
-          name='destination'
-          placeholder='Choose destination...'
-          onChange={this.handleInputChange}
-        /><br />
-        <br />
+      <Form class="calculator" onSubmit={this.handleSubmit}>
+        <Form.Group controlId="formBasicEmail">
+          <h2>Carbon Calculator</h2>
+          <Form.Control type="text" name="origin"
+            placeholder='Choose starting point...'
+            onChange={this.handleInputChange} />
+        </Form.Group>
 
-        <select name='mode' onChange={this.handleInputChange} value={this.state.mode}>
-          <option value="null" ></option>
-          <option value="driving" >Car</option>
-          <option value="bicycling" >Bike</option>
-          <option value="walking" >Walk</option>
+        <Form.Group controlId="formBasicEmail">
+          <Form.Control type="text" name="destination"
+            placeholder='Choose destination...'
+            onChange={this.handleInputChange} />
+        </Form.Group>
 
-
-
-        </select><br /><br />
+        <Form.Group controlId="dropDown">
+          <Form.Control as="select" name='mode' onChange={this.handleInputChange} value={this.state.mode}>
+            <option hidden >Transport Mode</option>
+            <option value="driving" >Car</option>
+            <option value="bicycling" >Bike</option>
+            <option value="walking" >Walk</option>
+          </Form.Control>
+        </Form.Group>
 
         <Button variant="success" type="submit">
           Calculate
         </Button>
 
         <h3>{this.state.apiResponse} </h3>
-      </form>
+      </Form>
     );
   }
 }
