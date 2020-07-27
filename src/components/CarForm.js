@@ -27,16 +27,31 @@ export default class CarForm extends React.Component {
             />
           </Form.Group>
           <Form.Group controlId="dropDown">
-          <Form.Control as="select" name='mode' onChange={this.props.handleInputChange} >
-            <option hidden >Transport Mode</option>
-            <option value="driving" selected>Car</option>
-            <option value="bicycling">Bike</option>
-            <option value="walking">Walk</option>
-            <option value="bus">Bus</option>
-            <option value="train" >Train</option>
-            <option value="airplane" >Airplane</option>
-          </Form.Control>
-        </Form.Group>
+            <Form.Control
+              as="select"
+              name="mode"
+              onChange={this.props.handleInputChange}
+            >
+              <option hidden>Transport Mode</option>
+              <option value="driving" selected>
+                Car
+              </option>
+              <option value="bicycling">Bike</option>
+              <option value="walking">Walk</option>
+              <option value="bus">Bus</option>
+              <option value="train">Train</option>
+              <option value="airplane">Airplane</option>
+            </Form.Control>
+          </Form.Group>
+
+          <Form.Group controlId="dropDown">
+            <Form.Control as="select" name="mode">
+              <option hidden>Car Type</option>
+              <option value="big" selected>
+                Big
+              </option>
+            </Form.Control>
+          </Form.Group>
 
           <Button variant="success" type="submit">
             Calculate

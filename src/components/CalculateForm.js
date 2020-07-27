@@ -6,15 +6,16 @@ import GenericForm from './GenericForm';
 import AirplaneForm from './AirplaneForm';
 import TrainForm from './TrainForm';
 import CarForm from './CarForm';
+import BusForm from './BusForm';
 export default class CalculateForm extends React.Component {
   render() {
-    if (this.props.mode == 'airplane') {
+    if (this.props.mode === 'airplane') {
       return <AirplaneForm
       handleSubmit={this.props.handleSubmit}
       handleInputChange={this.props.handleInputChange}
       />
     }
-    else if (this.props.mode == 'train') {
+    else if (this.props.mode === 'train') {
     return (
       <TrainForm
         handleSubmit={this.props.handleSubmit}
@@ -22,9 +23,17 @@ export default class CalculateForm extends React.Component {
       />
     );
     }
-    else if (this.props.mode == 'driving') {
+    else if (this.props.mode ==='driving') {
       return (
         <CarForm
+          handleSubmit={this.props.handleSubmit}
+          handleInputChange={this.props.handleInputChange}
+        />
+      );
+    }
+    else if (this.props.mode === 'bus') {
+      return (
+        <BusForm
           handleSubmit={this.props.handleSubmit}
           handleInputChange={this.props.handleInputChange}
         />
