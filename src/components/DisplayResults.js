@@ -6,9 +6,9 @@ export default class DisplayResults extends React.Component {
       <div>
         <button onClick={this.props.handleSubmit}>New Journey</button>
         <button onClick={this.props.handleButton}>See Alternatives</button>
-        {this.props.apiResponse ? (
+        {this.props.firstEmissionResult ? (
           <div>
-            <h3>Your carbon footprint: {this.props.apiResponse} </h3>
+            <h3>Your carbon footprint: {this.props.firstEmissionResult} </h3>
           </div>
         ) : (
           <div>
