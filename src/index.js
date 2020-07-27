@@ -4,8 +4,8 @@ import ReactDOM from 'react-dom';
 import './style/index.css';
 import Home from './components/Home';
 import * as serviceWorker from './serviceWorker';
-import Navbar from './Navbar';
-import Footer from './Footer';
+import Navbar from './components/Navbar';
+import Footer from './components/Footer';
 
 ReactDOM.render(
   <React.StrictMode>
