@@ -13,8 +13,8 @@ export default class CalculateForm extends React.Component {
       mode: '',
       transit_mode: null,
       apiResponse: '',
-      submitted: false,
-      alternatives: false,
+      showOriginalForm: true,
+      showAlternativesForm: false,
     };
   }
 
@@ -38,7 +38,7 @@ export default class CalculateForm extends React.Component {
   handleSubmit = (e) => {
     e.preventDefault();
     this.setState({
-      submitted: !this.state.submitted,
+      showOriginalForm: !this.state.showOriginalForm,
     });
     const { origin, destination, mode } = this.state;
 
@@ -56,7 +56,7 @@ export default class CalculateForm extends React.Component {
   handleButton = (e) => {
     e.preventDefault();
     this.setState({
-      alternatives: !this.state.alternatives,
+      showAlternativesForm: !this.state.showAlternativesForm,
     });
   };
 
@@ -70,7 +70,7 @@ export default class CalculateForm extends React.Component {
   };
 
   render() {
-    if (this.state.submitted === false) {
+    if (this.state.showOriginalForm  === true) {
       return (
         <form onSubmit={this.handleSubmit}>
           <input
@@ -93,7 +93,7 @@ export default class CalculateForm extends React.Component {
           <select
             name="mode"
             onChange={this.handleInputChange}
-            value={this.state.mode}
+          
           >
             <option value="null"></option>
             <option value="driving">Car</option>
@@ -107,7 +107,7 @@ export default class CalculateForm extends React.Component {
         </form>
       );
     } else {
-      if (this.state.alternatives === false) {
+      if (this.state.showAlternativesForm === false) {
         return (
           <div>
             <DisplayResults

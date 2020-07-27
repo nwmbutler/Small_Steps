@@ -12,7 +12,8 @@ export default class AlternativesForm extends React.Component {
           value={this.props.transit_mode}
         >
           <option value="null"></option>
-          <option value="rail">Rail</option>
+          <option value="bus">Bus</option>
+          <option value="train">Train</option>
         </select>
         <br />
         <br />
