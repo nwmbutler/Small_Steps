@@ -76,8 +76,8 @@ export default class CalculateForm extends React.Component {
           Calculate
         </Button>
 
-        <h3>{this.state.apiResponse} </h3>
-      </Form>
+         <span class="d-block bg-white"><h3>{this.state.apiResponse} </h3></span>
+        </Form>
     );
   }
 }
