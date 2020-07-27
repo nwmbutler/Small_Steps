@@ -14,7 +14,7 @@ export default class Home extends React.Component {
       mode: '',
       transit_mode: null,
       currentEmissionResult: null,
-
+      originalEmissionResult: null,
       showOriginalForm: true,
       showAlternativesForm: false,
       showResults: false,
@@ -43,6 +43,7 @@ export default class Home extends React.Component {
     this.setState({
       showOriginalForm: !this.state.showOriginalForm,
       showResults: true,
+      originalEmissionResult : null
     });
     const { origin, destination, mode } = this.state;
 
@@ -59,15 +60,14 @@ export default class Home extends React.Component {
 
   handleButton = (e) => {
     e.preventDefault();
-    alert('here')
     this.setState({
       showAlternativesForm: !this.state.showAlternativesForm,
-      currentEmissionResult: null,
     });
   };
 
   alternativeSubmit = (e) => {
     // alert(this.state.mode);
+
     e.preventDefault();
     const { origin, destination, mode, transit_mode } = this.state;
 
@@ -77,7 +77,10 @@ export default class Home extends React.Component {
       mode,
       transit_mode,
     };
-
+    this.setState({
+      originalEmissionResult: this.state.currentEmissionResult,
+    });
+    alert(this.state.originalEmissionResult)
     this.callAPI(journey, 'http://localhost:5000/transportAlternative');
     this.setState({
       showAlternativesForm: false,
@@ -114,6 +117,7 @@ export default class Home extends React.Component {
             handleSubmit={this.handleSubmit}
             handleButton={this.handleButton}
             currentEmissionResult={this.state.currentEmissionResult}
+            originalEmissionResult = {this.state.originalEmissionResult}
           />
         </div>
       );

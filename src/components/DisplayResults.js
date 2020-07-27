@@ -15,6 +15,12 @@ export default class DisplayResults extends React.Component {
             <h3>Calculating your journey</h3>
           </div>
         )}
+           
+          {this.props.originalEmissionResult && (
+          <div>
+           <h3>Your old carbon footprint: {this.props.originalEmissionResult} </h3>
+         </div>
+          )}
       </div>
     );
   }
