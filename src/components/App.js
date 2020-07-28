@@ -17,8 +17,10 @@ export default class App extends React.Component {
       origin: '',
       destination: '',
       mode: window.location.pathname,
+      transit_mode: null,
       currentEmissionResult: '',
-      originalEmissionResult: null
+      originalEmissionResult: null,
+      
     };
   }
   async callAPI(new_data, url) {
@@ -37,10 +39,12 @@ export default class App extends React.Component {
     this.setState({
       [e.target.name]: e.target.value,
     });
+  
 
     this.setState({
       mode: window.location.pathname.substr(1),
     });
+    
   };
 
   handleSubmit = (e) => {
@@ -56,14 +60,14 @@ export default class App extends React.Component {
   handleAlternativeSubmit = (input) => {
     // alert(this.state.mode);
 
-    const { origin, destination, mode} = this.state;
+    const { origin, destination, mode, transit_mode} = this.state;
 
     const journey = {
       origin,
       destination,
-      mode
+      mode,
+      transit_mode
     };
-    alert(this.state.mode)
     this.setState({
       originalEmissionResult: this.state.currentEmissionResult,
     });
@@ -126,7 +130,7 @@ export default class App extends React.Component {
               />
             </Route>
             <Route exact path="/alternatives">
-              <AlternativesForm />
+              <AlternativesForm handleInputChange={this.handleInputChange}/>
             </Route>
             <Route exact path="/resultsnew">
             <DisplayResults2

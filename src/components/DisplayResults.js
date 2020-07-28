@@ -13,7 +13,6 @@ export default class DisplayResults extends React.Component {
   componentDidMount() {
     const { handleSubmit } = this.props;
     handleSubmit();
-    alert('mounted');
   }
 
   render() {

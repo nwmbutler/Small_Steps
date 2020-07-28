@@ -1,11 +1,7 @@
 import React from 'react';
 import Button from 'react-bootstrap/Button';
 import { Form } from 'react-bootstrap';
-import{
-BrowserRouter as 
-Link,
-
-} from 'react-router-dom';
+import { Link } from 'react-router-dom';
 export default class BusForm extends React.Component {
   render() {
     return (
@@ -17,7 +13,7 @@ export default class BusForm extends React.Component {
             <Form.Control
               type="text"
               name="origin"
-              placeholder="Choose Departure bus Station "
+              placeholder="Choose Departure Bus Station "
               onChange={this.props.handleInputChange}
             />
           </Form.Group>
@@ -26,14 +22,13 @@ export default class BusForm extends React.Component {
             <Form.Control
               type="text"
               name="destination"
-              placeholder="Choose Arrival bus station"
+              placeholder="Choose Arrival Bus station"
               onChange={this.props.handleInputChange}
             />
           </Form.Group>
-          
 
           <Link to="/results">
-            <Button  variant="success" type="submit">
+            <Button variant="success" type="submit">
               Calculate
             </Button>
           </Link>

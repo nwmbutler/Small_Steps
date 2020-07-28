@@ -11,10 +11,9 @@ export default class AlternativesForm extends React.Component {
         Choose your alternative transport mode
         <Form>
           <Form.Group controlId="transitMode">
-            <Form.Control as="select" name='transit_mode' onChange={this.props.handleInputChange}
-              value={this.props.transit_mode} >
-              <option hidden >Transport Mode</option>
-              <option value="bus">Bus</option>
+            <Form.Control as="select" name='transit_mode' onChange={this.props.handleInputChange}>
+              <option  >Transport Mode</option>
+              <option  value="bus">Bus</option>
               <option value="train">Train</option>
             </Form.Control>
           </Form.Group>
