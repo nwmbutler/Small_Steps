@@ -1,6 +1,14 @@
 import React from 'react';
 import Button from 'react-bootstrap/Button';
 import Container from 'react-bootstrap/Container';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link,
+  useRouteMatch,
+  useParams,
+} from 'react-router-dom';
 export default class DisplayResults extends React.Component {
   constructor(props) {
     super(props);
@@ -11,7 +19,7 @@ export default class DisplayResults extends React.Component {
     };
   }
   componentDidMount() {
-    const { handleSubmit} = this.props;
+    const { handleSubmit } = this.props;
     handleSubmit();
   }
 
@@ -23,7 +31,9 @@ export default class DisplayResults extends React.Component {
         </Container>
         <br />
         <Container>
-          <Button variant="success">See Alternatives</Button>
+          <Link to="/alternatives">
+            <Button variant="success">See Alternatives</Button>
+          </Link>
         </Container>
         <br />
         <Container>

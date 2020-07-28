@@ -93,6 +93,10 @@ export default class App extends React.Component {
             result = {this.state.currentEmissionResult}
             />
           </Route>
+          <Route exact path="/alternatives">
+            <AlternativesForm
+            />
+          </Route>
         </Switch>
       </div>
     </Router>    
