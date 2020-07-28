@@ -26,17 +26,7 @@ export default class AirplaneForm extends React.Component {
               onChange={this.props.handleInputChange}
             />
           </Form.Group>
-          <Form.Group controlId="dropDown">
-          <Form.Control as="select" name='mode' onChange={this.props.handleInputChange} >
-            <option hidden >Transport Mode</option>
-            <option value="driving">Car</option>
-            <option value="bicycling">Bike</option>
-            <option value="walking">Walk</option>
-            <option value="bus">Bus</option>
-            <option value="train">Train</option>
-            <option value="airplane" selected>Airplane</option>
-          </Form.Control>
-        </Form.Group>
+         
 
           <Button variant="success" type="submit">
             Calculate

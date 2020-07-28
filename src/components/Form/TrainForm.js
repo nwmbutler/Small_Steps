@@ -1,7 +1,14 @@
 import React from 'react';
 import Button from 'react-bootstrap/Button';
 import { Form } from 'react-bootstrap';
-
+import {
+BrowserRouter as Router,
+Switch,
+Route,
+Link,
+useRouteMatch,
+useParams,
+} from 'react-router-dom';
 export default class TrainForm extends React.Component {
   render() {
     return (
@@ -26,21 +33,13 @@ export default class TrainForm extends React.Component {
               onChange={this.props.handleInputChange}
             />
           </Form.Group>
-          <Form.Group controlId="dropDown">
-          <Form.Control as="select" name='mode' onChange={this.props.handleInputChange} >
-            <option hidden >Transport Mode</option>
-            <option value="driving">Car</option>
-            <option value="bicycling">Bike</option>
-            <option value="walking">Walk</option>
-            <option value="bus">Bus</option>
-            <option value="train" selected>Train</option>
-            <option value="airplane" >Airplane</option>
-          </Form.Control>
-        </Form.Group>
-
-          <Button variant="success" type="submit">
-            Calculate
-          </Button>
+          
+          <Link to="/results">
+            <Button  variant="success" type="submit">
+              Calculate
+            </Button>
+          </Link>
+          
         </Form>
       </div>
     );

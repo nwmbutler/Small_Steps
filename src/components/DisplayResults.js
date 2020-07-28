@@ -21,13 +21,17 @@ export default class DisplayResults extends React.Component {
   componentDidMount() {
     const { handleSubmit } = this.props;
     handleSubmit();
+    alert('mounted')
   }
 
   render() {
     return (
       <div class="display">
         <Container>
-          <Button variant="success">New Journey</Button>
+        <Link to="/">
+            <Button variant="success">New Journey</Button>
+          </Link>
+  
         </Container>
         <br />
         <Container>

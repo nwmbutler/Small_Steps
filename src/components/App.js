@@ -7,6 +7,7 @@ import {
   useRouteMatch,
   useParams,
 } from 'react-router-dom';
+import { createBrowserHistory } from 'history';
 import axios from 'axios';
 import CarForm from './Form/CarForm';
 import AlternativesForm from './AlternativesForm.js';
@@ -14,7 +15,7 @@ import AirplaneForm from './Form/AirplaneForm';
 import TrainForm from './Form/TrainForm';
 import BusForm from './Form/BusForm';
 import DisplayResults from './DisplayResults.js';
-
+import Home2 from './Home2.js';
 export default class App extends React.Component {
   constructor(props) {
     super(props);
@@ -22,9 +23,8 @@ export default class App extends React.Component {
     this.state = {
       origin: '',
       destination: '',
-      mode: '',
+      mode: window.location.pathname,
       currentEmissionResult: '',
-      
     };
   }
   async callAPI(new_data, url) {
@@ -43,12 +43,13 @@ export default class App extends React.Component {
     this.setState({
       [e.target.name]: e.target.value,
     });
-    
+
+    this.setState({
+      mode: window.location.pathname.substr(1),
+    });
   };
 
   handleSubmit = (e) => {
-   
-
     const { origin, destination, mode } = this.state;
 
     const journey = {
@@ -58,54 +59,66 @@ export default class App extends React.Component {
     };
     this.callAPI(journey, 'http://localhost:5000/testAPI');
   };
-  render() { 
-    return (  
+  render() {
+    return (
       <Router>
-      <div>
-        <ul>
-          <li>
-            <Link to="/">Home</Link>
-          </li>
-          <li>
-            <Link to="/plane">plane</Link>
-          </li>
-          <li>
-            <Link to="/bus">bus</Link>
-          </li>
-        </ul>
+        <div>
+          <ul>
+            <li>
+              <Link to="/driving">Car</Link>
+            </li>
+            <li>
+              <Link to="/plane">Plane</Link>
+            </li>
+            <li>
+              <Link to="/bus">Bus</Link>
+            </li>
+            <li>
+              <Link to="/train">Train</Link>
+            </li>
+          </ul>
 
-        <Switch>
+          <Switch>
           <Route exact path="/">
-            <CarForm handleSubmit={this.handleSubmit}
-          handleInputChange={this.handleInputChange}
-          
-          />
-          </Route>
-          <Route exact path="/plane">
-            <AirplaneForm />
-          </Route>
-          <Route exact path="/bus">
-            <BusForm />
-          </Route>
+              <Home2
+              />
+            </Route>
+            <Route exact path="/driving">
+              <CarForm
+                handleSubmit={this.handleSubmit}
+                handleInputChange={this.handleInputChange}
+              />
+            </Route>
+            <Route exact path="/plane">
+              <AirplaneForm
+                handleSubmit={this.handleSubmit}
+                handleInputChange={this.handleInputChange}
+              />
+            
+            </Route>
+            <Route exact path="/train">
+              <TrainForm
+                handleSubmit={this.handleSubmit}
+                handleInputChange={this.handleInputChange}
+              />
+            </Route>
+            <Route exact path="/bus">
+              <BusForm  handleSubmit={this.handleSubmit}
+                handleInputChange={this.handleInputChange}/>
+            </Route>
 
-          <Route exact path="/results">
-            <DisplayResults handleSubmit = {this.handleSubmit}
-            result = {this.state.currentEmissionResult}
-            />
-          </Route>
-          <Route exact path="/alternatives">
-            <AlternativesForm
-            />
-          </Route>
-        </Switch>
-      </div>
-    </Router>    
-       
+            <Route exact path="/results">
+              <DisplayResults
+                handleSubmit={this.handleSubmit}
+                result={this.state.currentEmissionResult}
+              />
+            </Route>
+            <Route exact path="/alternatives">
+              <AlternativesForm />
+            </Route>
+          </Switch>
+        </div>
+      </Router>
     );
   }
 }
-
-
-
-
-
