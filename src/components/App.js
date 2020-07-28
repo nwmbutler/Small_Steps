@@ -52,13 +52,22 @@ export default class App extends React.Component {
   };
 
   handleSubmit = (e) => {
-    const { origin, destination, mode } = this.state;
+    var { origin, destination, mode } = this.state;
+
+    console.log(mode)
+
+    if (mode === 'plane') {
+      mode = 'walking'
+    }
 
     const journey = {
       origin,
       destination,
       mode,
     };
+    console.log(mode)
+    console.log(journey)
+
     this.callAPI(journey, `${url}/testAPI`);
   };
   handleAlternativeSubmit = (input) => {
