@@ -11,17 +11,23 @@ export default class CarForm extends React.Component {
         <h2>Carbon Calculator</h2>
 
         <Form class="calculator">
-      
-          <AutoCompleteOrigin icon = {this.props.handleInputChange}/>
 
-          <AutoCompleteDestination icon = {this.props.handleInputChange}/>
+        <AutoCompleteOrigin origin_result = {this.props.handleInputChange}/>
 
-          <Link to="/results">
-            <Button variant="success" type="submit">
-              Calculate
-            </Button>
-          </Link>
+        <AutoCompleteDestination destination_result = {this.props.handleInputChange}/>
+
+        <Link to="/results">
+
+        <Button variant="success" type="submit">
+
+        Calculate
+
+        </Button>
+
+        </Link>
+
         </Form>
+
       </div>
     );
   }

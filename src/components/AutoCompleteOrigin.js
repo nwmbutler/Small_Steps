@@ -5,7 +5,7 @@ import usePlacesAutocomplete, {
   getLatLng,
 } from "use-places-autocomplete";
 
-const AutoCompleteOrigin = (icon) => {
+const AutoCompleteOrigin = (origin_result) => {
   const {
     ready,
     value,
@@ -23,7 +23,7 @@ const AutoCompleteOrigin = (icon) => {
 
   const handleInput = (e) => {
     setValue(e.target.value);
-    icon.icon(e)
+    origin_result.origin_result(e)
   };
 
   const handleSelect = ({ description }) => () => {
@@ -49,18 +49,23 @@ const AutoCompleteOrigin = (icon) => {
 
       return (
         <li key={id} onClick={handleSelect(suggestion)}>
-        {main_text} {secondary_text}
+        <strong>{secondary_text} {main_text}</strong>
         </li>
       );
     });
 
   return (
-    <div ref={ref}>
+    <div
+
+    ref={ref}>
       <input
-        value={value}
-        onChange={handleInput}
-        disabled={!ready}
-        name = "origin"
+      type="text"
+      size="50"
+      placeholder="Origin"
+      value={value}
+      onChange={handleInput}
+      disabled={!ready}
+      name = "origin"
       />
       {status === "OK" && <ul>{renderSuggestions()}</ul>}
     </div>
