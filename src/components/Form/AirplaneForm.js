@@ -1,6 +1,7 @@
 import React from 'react';
 import Button from 'react-bootstrap/Button';
 import { Form } from 'react-bootstrap';
+import { Link } from 'react-router-dom';;
 
 export default class AirplaneForm extends React.Component {
   render() {
@@ -27,9 +28,11 @@ export default class AirplaneForm extends React.Component {
             />
           </Form.Group>
 
-          <Button variant="success" type="submit">
-            Calculate
-          </Button>
+           <Link to="/results">
+            <Button variant="success" type="submit">
+              Calculate
+            </Button>
+          </Link>
         </Form>
       </div>
     );
