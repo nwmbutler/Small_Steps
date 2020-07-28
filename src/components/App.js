@@ -54,8 +54,6 @@ export default class App extends React.Component {
   handleSubmit = (e) => {
     var { origin, destination, mode } = this.state;
 
-    console.log(mode)
-
     if (mode === 'plane') {
       mode = 'walking'
     }
@@ -65,8 +63,6 @@ export default class App extends React.Component {
       destination,
       mode,
     };
-    console.log(mode)
-    console.log(journey)
 
     this.callAPI(journey, `${url}/testAPI`);
   };
