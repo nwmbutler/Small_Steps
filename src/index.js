@@ -6,12 +6,10 @@ import Home from './components/Home';
 import * as serviceWorker from './serviceWorker';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
-
+import App from './components/App';
 ReactDOM.render(
   <React.StrictMode>
-    <Navbar />
-    <Home />
-    <Footer />
+    <App />
   </React.StrictMode>,
   document.getElementById('root')
 );
