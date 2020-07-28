@@ -1,13 +1,5 @@
 import React from 'react';
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  Link,
-  useRouteMatch,
-  useParams,
-} from 'react-router-dom';
-import { createBrowserHistory } from 'history';
+import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
 import axios from 'axios';
 import CarForm from './Form/CarForm';
 import AlternativesForm from './AlternativesForm.js';
@@ -16,6 +8,7 @@ import TrainForm from './Form/TrainForm';
 import BusForm from './Form/BusForm';
 import DisplayResults from './DisplayResults.js';
 import Home2 from './Home2.js';
+import DisplayResults2 from './DisplayResults2.js';
 export default class App extends React.Component {
   constructor(props) {
     super(props);
@@ -25,6 +18,7 @@ export default class App extends React.Component {
       destination: '',
       mode: window.location.pathname,
       currentEmissionResult: '',
+      originalEmissionResult: null
     };
   }
   async callAPI(new_data, url) {
@@ -59,6 +53,24 @@ export default class App extends React.Component {
     };
     this.callAPI(journey, 'http://localhost:5000/testAPI');
   };
+  handleAlternativeSubmit = (input) => {
+    // alert(this.state.mode);
+
+    const { origin, destination, mode} = this.state;
+
+    const journey = {
+      origin,
+      destination,
+      mode
+    };
+    alert(this.state.mode)
+    this.setState({
+      originalEmissionResult: this.state.currentEmissionResult,
+    });
+    // alert(this.state.originalEmissionResult);
+    this.callAPI(journey, 'http://localhost:5000/transportAlternative');
+  };
+
   render() {
     return (
       <Router>
@@ -79,9 +91,8 @@ export default class App extends React.Component {
           </ul>
 
           <Switch>
-          <Route exact path="/">
-              <Home2
-              />
+            <Route exact path="/">
+              <Home2 />
             </Route>
             <Route exact path="/driving">
               <CarForm
@@ -94,7 +105,6 @@ export default class App extends React.Component {
                 handleSubmit={this.handleSubmit}
                 handleInputChange={this.handleInputChange}
               />
-            
             </Route>
             <Route exact path="/train">
               <TrainForm
@@ -103,8 +113,10 @@ export default class App extends React.Component {
               />
             </Route>
             <Route exact path="/bus">
-              <BusForm  handleSubmit={this.handleSubmit}
-                handleInputChange={this.handleInputChange}/>
+              <BusForm
+                handleSubmit={this.handleSubmit}
+                handleInputChange={this.handleInputChange}
+              />
             </Route>
 
             <Route exact path="/results">
@@ -115,6 +127,14 @@ export default class App extends React.Component {
             </Route>
             <Route exact path="/alternatives">
               <AlternativesForm />
+            </Route>
+            <Route exact path="/resultsnew">
+            <DisplayResults2
+            alternativeSubmit = {this.handleAlternativeSubmit}
+            result={this.state.currentEmissionResult}
+            originalresult= {this.state.originalEmissionResult}
+            
+            />
             </Route>
           </Switch>
         </div>

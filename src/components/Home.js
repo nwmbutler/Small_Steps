@@ -3,7 +3,7 @@ import axios from 'axios';
 import './Form.css';
 import AlternativesForm from './AlternativesForm.js';
 import DisplayResults from './DisplayResults.js';
-import CalculateForm from './CalculateForm.js';
+
 
 import {
   BrowserRouter as Router,
@@ -97,19 +97,7 @@ export default class Home extends React.Component {
   };
 
   render() {
-    if (this.state.showOriginalForm) {
-      return (
-        <div>
-          <div>
-            <CalculateForm
-              handleSubmit={this.handleSubmit}
-              handleInputChange={this.handleInputChange}
-              mode = {this.state.mode}
-            />
-          </div>
-        </div>
-      );
-    }
+  
 
     if (this.state.showAlternativesForm) {
       return (

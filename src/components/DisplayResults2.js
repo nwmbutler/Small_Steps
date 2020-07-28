@@ -2,17 +2,17 @@ import React from 'react';
 import Button from 'react-bootstrap/Button';
 import Container from 'react-bootstrap/Container';
 import { Link } from 'react-router-dom';
-export default class DisplayResults extends React.Component {
+export default class DisplayResults2 extends React.Component {
   constructor(props) {
     super(props);
 
     this.state = {
-      parentfunction: this.props.handleSubmit,
+      parentfunction: this.props.handleAlternativeSubmit,
     };
   }
   componentDidMount() {
-    const { handleSubmit } = this.props;
-    handleSubmit();
+    const { alternativeSubmit } = this.props;
+    alternativeSubmit();
     alert('mounted');
   }
 
@@ -25,16 +25,16 @@ export default class DisplayResults extends React.Component {
           </Link>
         </Container>
         <br />
-        <Container>
-          <Link to="/alternatives">
-            <Button variant="success">See Alternatives</Button>
-          </Link>
-        </Container>
         <br />
+        <div>
+            <span class="d-block bg-white">
+              Your carbon old footprint is: {this.props.originalresult}
+            </span>
+          </div>
         <Container>
           <div>
             <span class="d-block bg-white">
-              Your carbon footprint: {this.props.result}
+              Your carbon new footprint is: {this.props.result}
             </span>
           </div>
         </Container>

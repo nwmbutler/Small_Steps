@@ -1,7 +1,7 @@
 import React from 'react';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
-
+import { Link } from 'react-router-dom';
 
 export default class AlternativesForm extends React.Component {
   render() {
@@ -18,7 +18,12 @@ export default class AlternativesForm extends React.Component {
               <option value="train">Train</option>
             </Form.Control>
           </Form.Group>
-          <Button variant="success" onClick={this.props.alternativeSubmit}>Calculate</Button>
+          <Link to="/resultsnew">
+            <Button variant="success" type="submit">
+              Calculate
+            </Button>
+          </Link>
+
         </Form>
       </div>
     );

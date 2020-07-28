@@ -1,7 +1,11 @@
 import React from 'react';
 import Button from 'react-bootstrap/Button';
 import { Form } from 'react-bootstrap';
+import{
+BrowserRouter as 
+Link,
 
+} from 'react-router-dom';
 export default class BusForm extends React.Component {
   render() {
     return (
@@ -28,9 +32,11 @@ export default class BusForm extends React.Component {
           </Form.Group>
           
 
-          <Button variant="success" type="submit">
-            Calculate
-          </Button>
+          <Link to="/results">
+            <Button  variant="success" type="submit">
+              Calculate
+            </Button>
+          </Link>
         </Form>
       </div>
     );
