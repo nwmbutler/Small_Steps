@@ -5,7 +5,7 @@ import usePlacesAutocomplete, {
   getLatLng,
 } from "use-places-autocomplete";
 
-const Autocomplete = (icon) => {
+const AutoCompleteOrigin = (icon) => {
   const {
     ready,
     value,
@@ -67,4 +67,4 @@ const Autocomplete = (icon) => {
   );
 };
 
-export default Autocomplete;
+export default AutoCompleteOrigin;
