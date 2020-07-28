@@ -1,8 +1,8 @@
 import React from 'react';
 import Button from 'react-bootstrap/Button';
 import { Form } from 'react-bootstrap';
-
-export default class GenericForm extends React.Component {
+import { Link } from 'react-router-dom';
+export default class TrainForm extends React.Component {
   render() {
     return (
       <div>
@@ -13,7 +13,7 @@ export default class GenericForm extends React.Component {
             <Form.Control
               type="text"
               name="origin"
-              placeholder="Choose starting point..."
+              placeholder="Choose Departure Train Station "
               onChange={this.props.handleInputChange}
             />
           </Form.Group>
@@ -22,14 +22,16 @@ export default class GenericForm extends React.Component {
             <Form.Control
               type="text"
               name="destination"
-              placeholder="Choose destination..."
+              placeholder="Choose Arrival Train Station"
               onChange={this.props.handleInputChange}
             />
           </Form.Group>
 
-          <Button variant="success" type="submit">
-            Calculate
-          </Button>
+          <Link to="/results">
+            <Button variant="success" type="submit">
+              Calculate
+            </Button>
+          </Link>
         </Form>
       </div>
     );
