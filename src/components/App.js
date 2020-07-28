@@ -40,7 +40,7 @@ export default class App extends React.Component {
     this.setState({
       [e.target.name]: e.target.value,
     });
-
+    // alert(this.state.origin)
 
     this.setState({
       mode: window.location.pathname.substr(1),

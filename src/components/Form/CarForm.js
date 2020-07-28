@@ -1,7 +1,7 @@
 import React from 'react';
 import Button from 'react-bootstrap/Button';
 import { Form } from 'react-bootstrap';
-
+import Autocomplete from '../AutoComplete'
 import { Link } from 'react-router-dom';
 export default class CarForm extends React.Component {
   render() {
@@ -18,6 +18,8 @@ export default class CarForm extends React.Component {
               onChange={this.props.handleInputChange}
             />
           </Form.Group>
+      
+
 
           <Form.Group controlId="formBasicEmail">
             <Form.Control
@@ -34,6 +36,7 @@ export default class CarForm extends React.Component {
               Calculate
             </Button>
           </Link>
+          <Autocomplete icon = {this.props.handleInputChange} />
         </Form>
       </div>
     );
