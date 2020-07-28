@@ -4,13 +4,7 @@ import './Form.css';
 import AlternativesForm from './AlternativesForm.js';
 import DisplayResults from './DisplayResults.js';
 
-
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  Link
-} from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
 
 export default class Home extends React.Component {
   constructor(props) {
@@ -97,8 +91,6 @@ export default class Home extends React.Component {
   };
 
   render() {
-  
-
     if (this.state.showAlternativesForm) {
       return (
         <div>

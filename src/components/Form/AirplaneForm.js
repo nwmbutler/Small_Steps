@@ -26,7 +26,6 @@ export default class AirplaneForm extends React.Component {
               onChange={this.props.handleInputChange}
             />
           </Form.Group>
-         
 
           <Button variant="success" type="submit">
             Calculate
