@@ -9,6 +9,7 @@ import BusForm from './Form/BusForm';
 import DisplayResults from './DisplayResults.js';
 import Home2 from './Home2.js';
 import DisplayResults2 from './DisplayResults2.js';
+import AutoComplete from './AutoComplete.js';
 export default class App extends React.Component {
   constructor(props) {
     super(props);
@@ -20,7 +21,7 @@ export default class App extends React.Component {
       transit_mode: null,
       currentEmissionResult: '',
       originalEmissionResult: null,
-      
+
     };
   }
   async callAPI(new_data, url) {
@@ -39,12 +40,12 @@ export default class App extends React.Component {
     this.setState({
       [e.target.name]: e.target.value,
     });
-  
+
 
     this.setState({
       mode: window.location.pathname.substr(1),
     });
-    
+
   };
 
   handleSubmit = (e) => {
@@ -92,6 +93,9 @@ export default class App extends React.Component {
             <li>
               <Link to="/train">Train</Link>
             </li>
+            <li>
+              <Link to="/autocomplete">autocomplete</Link>
+            </li>
           </ul>
 
           <Switch>
@@ -102,6 +106,10 @@ export default class App extends React.Component {
               <CarForm
                 handleSubmit={this.handleSubmit}
                 handleInputChange={this.handleInputChange}
+              />
+            </Route>
+            <Route exact path="/autocomplete">
+              <AutoComplete
               />
             </Route>
             <Route exact path="/plane">
@@ -137,7 +145,7 @@ export default class App extends React.Component {
             alternativeSubmit = {this.handleAlternativeSubmit}
             result={this.state.currentEmissionResult}
             originalresult= {this.state.originalEmissionResult}
-            
+
             />
             </Route>
           </Switch>

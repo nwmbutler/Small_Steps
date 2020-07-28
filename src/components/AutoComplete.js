@@ -59,7 +59,7 @@ const Autocomplete = () => {
         value={value}
         onChange={handleInput}
         disabled={!ready}
-        placeholder="Origin"
+        placeholder="Test"
       />
       {status === "OK" && <ul>{renderSuggestions()}</ul>}
     </div>
