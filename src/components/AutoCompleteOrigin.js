@@ -49,7 +49,7 @@ const AutoCompleteOrigin = (origin_result) => {
 
       return (
         <li key={id} onClick={handleSelect(suggestion)}>
-        <strong>{secondary_text} {main_text}</strong>
+          <strong>{main_text}</strong> <small>{secondary_text}</small>
         </li>
       );
     });
@@ -59,9 +59,7 @@ const AutoCompleteOrigin = (origin_result) => {
 
     ref={ref}>
       <input
-      type="text"
-      size="50"
-      placeholder="Origin"
+      placeholder="Choose Departure Point"
       value={value}
       onChange={handleInput}
       disabled={!ready}

@@ -1,4 +1,7 @@
 import React from "react";
+import Button from 'react-bootstrap/Button';
+import { Form } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 import useOnclickOutside from "react-cool-onclickoutside";
 import usePlacesAutocomplete, {
   getGeocode,
@@ -49,7 +52,7 @@ const AutoCompleteDestination = (destination_result) => {
 
       return (
         <li key={id} onClick={handleSelect(suggestion)}>
-          <strong>{secondary_text} {main_text}</strong>
+          <strong>{main_text}</strong> <small>{secondary_text}</small>
         </li>
       );
     });
@@ -57,9 +60,11 @@ const AutoCompleteDestination = (destination_result) => {
   return (
     <div ref={ref}>
       <input
+        controlId="formBasicEmail"
         type="text"
         size="50"
-        placeholder="Destination"
+        aria-autocomplete="list"
+        placeholder="Choose Arrival Point"
         value={value}
         onChange={handleInput}
         disabled={!ready}
