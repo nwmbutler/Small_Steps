@@ -9,6 +9,10 @@ import BusForm from './Form/BusForm';
 import DisplayResults from './DisplayResults.js';
 import Home2 from './Home2.js';
 import DisplayResults2 from './DisplayResults2.js';
+import { config } from '../Constants';
+
+var url = config.url.API_URL;
+
 export default class App extends React.Component {
   constructor(props) {
     super(props);
@@ -55,7 +59,7 @@ export default class App extends React.Component {
       destination,
       mode,
     };
-    this.callAPI(journey, 'http://localhost:5000/testAPI');
+    this.callAPI(journey, `${url}/testAPI`);
   };
   handleAlternativeSubmit = (input) => {
     // alert(this.state.mode);
@@ -72,7 +76,7 @@ export default class App extends React.Component {
       originalEmissionResult: this.state.currentEmissionResult,
     });
     // alert(this.state.originalEmissionResult);
-    this.callAPI(journey, 'http://localhost:5000/transportAlternative');
+    this.callAPI(journey, `${url}/transportAlternative`);
   };
 
   render() {
