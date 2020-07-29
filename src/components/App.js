@@ -24,7 +24,7 @@ export default class App extends React.Component {
       transit_mode: null,
       currentEmissionResult: '',
       originalEmissionResult: null,
-      
+
     };
   }
   async callAPI(new_data, url) {
@@ -43,13 +43,28 @@ export default class App extends React.Component {
     this.setState({
       [e.target.name]: e.target.value,
     });
-  
+    // alert(this.state.destination)
 
     this.setState({
       mode: window.location.pathname.substr(1),
     });
-    
+
   };
+
+  handleInputChange2 = (description) => {
+    this.setState({
+      origin: description
+    });
+      console.log(description)
+  }
+
+  handleInputChange3 = (description) => {
+    this.setState({
+      destination: description
+    });
+    console.log(description)
+  }
+
 
   handleSubmit = (e) => {
     var { origin, destination, mode } = this.state;
@@ -111,24 +126,32 @@ export default class App extends React.Component {
               <CarForm
                 handleSubmit={this.handleSubmit}
                 handleInputChange={this.handleInputChange}
+                handleInputChange2={this.handleInputChange2}
+                handleInputChange3={this.handleInputChange3}
               />
             </Route>
             <Route exact path="/plane">
               <AirplaneForm
-                handleSubmit={this.handleSubmit}
-                handleInputChange={this.handleInputChange}
+              handleSubmit={this.handleSubmit}
+              handleInputChange={this.handleInputChange}
+              handleInputChange2={this.handleInputChange2}
+              handleInputChange3={this.handleInputChange3}
               />
             </Route>
             <Route exact path="/train">
               <TrainForm
-                handleSubmit={this.handleSubmit}
-                handleInputChange={this.handleInputChange}
+              handleSubmit={this.handleSubmit}
+              handleInputChange={this.handleInputChange}
+              handleInputChange2={this.handleInputChange2}
+              handleInputChange3={this.handleInputChange3}
               />
             </Route>
             <Route exact path="/bus">
               <BusForm
-                handleSubmit={this.handleSubmit}
-                handleInputChange={this.handleInputChange}
+              handleSubmit={this.handleSubmit}
+              handleInputChange={this.handleInputChange}
+              handleInputChange2={this.handleInputChange2}
+              handleInputChange3={this.handleInputChange3}
               />
             </Route>
 
@@ -146,7 +169,7 @@ export default class App extends React.Component {
             alternativeSubmit = {this.handleAlternativeSubmit}
             result={this.state.currentEmissionResult}
             originalresult= {this.state.originalEmissionResult}
-            
+
             />
             </Route>
           </Switch>
