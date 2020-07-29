@@ -1,5 +1,6 @@
 import React from 'react';
 import Navbar from 'react-bootstrap/Navbar';
+import Nav from 'react-bootstrap/Nav';
 import logo from "../sslogo.png";
 
 
@@ -7,7 +8,7 @@ export default class Header extends React.Component {
   render() {
     return (
       <Navbar className="colorNav" sticky="top">
-        <Navbar.Brand href="#home">
+        <Navbar.Brand href="/">
           <img
             src={logo}
             width="200"
@@ -16,6 +17,9 @@ export default class Header extends React.Component {
             alt="Logo"
           />
         </Navbar.Brand>
+        <Nav className="mr-auto">
+          <Nav.Link href="/about">About</Nav.Link>
+        </Nav>
       </Navbar>
     );
   }
