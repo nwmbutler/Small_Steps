@@ -1,4 +1,5 @@
 import React from "react";
+import ListGroup from 'react-bootstrap/ListGroup';
 import useOnclickOutside from "react-cool-onclickoutside";
 import usePlacesAutocomplete, {
   getGeocode,
@@ -39,7 +40,7 @@ const AutoCompleteDestination = (input_params) => {
       .catch((error) => {
         console.log("Error:", error);
       });
-    };
+  };
 
   const renderSuggestions = () =>
     data.map((suggestion) => {
@@ -49,27 +50,27 @@ const AutoCompleteDestination = (input_params) => {
       } = suggestion;
 
       return (
-        <li key={id} onClick={handleSelect(suggestion)}>
+        <ListGroup.Item key={id} onClick={handleSelect(suggestion)}>
           <strong>{main_text}</strong> <small>{secondary_text}</small>
-        </li>
+        </ListGroup.Item>
       );
     });
 
   return (
     <div
 
-    ref={ref}>
+      ref={ref}>
       <input
-      size="50"
-      type = 'text'
-      minlength='1'
-      placeholder={input_params.placeholder}
-      value={value}
-      onChange={handleInput}
-      disabled={!ready}
-      name = {input_params.name}
+        size="50"
+        type='text'
+        minlength='1'
+        placeholder={input_params.placeholder}
+        value={value}
+        onChange={handleInput}
+        disabled={!ready}
+        name={input_params.name}
       />
-      {status === "OK" && <ul>{renderSuggestions()}</ul>}
+      {status === "OK" && <ListGroup>{renderSuggestions()}</ListGroup>}
     </div>
   );
 };
