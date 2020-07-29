@@ -1,6 +1,7 @@
 import React from "react";
 import useOnclickOutside from "react-cool-onclickoutside";
 import ListGroup from 'react-bootstrap/ListGroup';
+import Form from 'react-bootstrap/Form';
 import usePlacesAutocomplete, {
   getGeocode,
   getLatLng,
@@ -60,18 +61,20 @@ const AutoCompleteOrigin = (input_params) => {
     <div
 
       ref={ref}>
-      <input
-        size="50"
-        type='text'
-        minLength={5}
-        placeholder={input_params.placeholder}
-        value={value}
-        onChange={handleInput}
-        disabled={!ready}
-        name={input_params.name}
-      />
-      {status === "OK" && <ListGroup>{renderSuggestions()}</ListGroup>}
-    </div>
+      <Form>
+        <Form.Control
+          size="50"
+          type='text'
+          minLength={5}
+          placeholder={input_params.placeholder}
+          value={value}
+          onChange={handleInput}
+          disabled={!ready}
+          name={input_params.name}
+        />
+        {status === "OK" && <ListGroup>{renderSuggestions()}</ListGroup>}
+      </Form>
+    </div >
   );
 };
 
