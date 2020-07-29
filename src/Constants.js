@@ -1,12 +1,12 @@
 const prod = {
   url: {
-    API_URL: "https://carbon-backend2.herokuapp.com/testAPI"
+    API_URL: "https://carbon-backend2.herokuapp.com"
   }
 };
 
 const dev = {
   url: {
-    API_URL: "http://localhost:5000/testAPI"
+    API_URL: "http://localhost:5000"
   }
 };
 
