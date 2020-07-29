@@ -28,13 +28,13 @@ export default class DisplayResults extends React.Component {
             </div>
           </Row>
 
-          <Row className="justify-content-center animate__animated animate__zoomIn animate__delay-2s" id="displayResult">
+          <Row className="justify-content-center animate__animated animate__zoomIn animate__delay-3s" id="displayResult">
             <Link to="/alternatives">
               <Button variant="success">See Alternatives</Button>
             </Link>
           </Row>
 
-          <Row className="justify-content-center animate__animated animate__zoomIn animate__delay-3s" id="displayResult">
+          <Row className="justify-content-center animate__animated animate__zoomIn animate__delay-4s" id="displayResult">
             <Link to="/">
               <Button variant="success">New Journey</Button>
             </Link>
