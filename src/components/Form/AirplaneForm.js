@@ -4,49 +4,66 @@ import { Form } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import AutoCompleteOrigin from '../AutoCompleteOrigin'
 import AutoCompleteDestination from '../AutoCompleteDestination'
+import Container from 'react-bootstrap/Container';
+import Row from 'react-bootstrap/Row';
 export default class AirplaneForm extends React.Component {
   render() {
     return (
       <div>
-      <h2>Plane Calculator</h2>
-      <div>
-          <ul>
-            <li>
-              <Link to="/bus">bus</Link>
-            </li>
-            <li>
-              <Link to="/driving">Car</Link>
-            </li>
-            <li>
-              <Link to="/train">Train</Link>
-            </li>
-          </ul>
-        </div>
-      <Form class="calculator">
+        <Container>
+          <Row className="justify-content-center">
+            <h1 id="plane">Air Travel Calculator</h1>
+          </Row>
 
-      <AutoCompleteOrigin
-      origin_result1 = {this.props.handleInputChange}
-      origin_result2 = {this.props.handleInputChange2}
-      placeholder = 'Choose Departure Airport (UK)'
-      name = 'origin'
-      /><br />
+          {/* <div className="links animate__animated animate__zoomIn"> */}
 
-      <AutoCompleteDestination
-    origin_result1 = {this.props.handleInputChange}
-    origin_result3 = {this.props.handleInputChange3}
-    placeholder = 'Choose Arrival Airport (UK)'
-    name = 'destination'
-    /><br />
-
-        <Link to="/results">
-
-          <Button variant="success" type="submit">
-            Calculate
-          </Button>
-
+          <Row className="justify-content-center">
+            <Link to="/driving">
+              <Button className="buttonLinkForm " variant="light">
+                <i class="fa fa-car fa-2x" id="icon" aria-hidden="true"></i>
+              </Button>
             </Link>
-        </Form>
+            <Link to="/bus">
+              <Button className="buttonLinkForm " variant="light">
+                <i class="fa fa-bus fa-2x" id="icon" aria-hidden="true"></i>
+              </Button>
+            </Link>
+            <Link to="/train">
+              <Button className="buttonLinkForm " variant="light">
+                <i class="fa fa-train fa-2x" id="icon" aria-hidden="true"></i>
+              </Button>
+            </Link>
+          </Row>
+          <Row className="justify-content-center">
+            <Form class="calculator">
+
+              <AutoCompleteOrigin
+                origin_result1={this.props.handleInputChange}
+                origin_result2={this.props.handleInputChange2}
+                placeholder='Choose Departure Airport (UK)'
+                name='origin'
+              /><br />
+
+              <AutoCompleteDestination
+                origin_result1={this.props.handleInputChange}
+                origin_result3={this.props.handleInputChange3}
+                placeholder='Choose Arrival Airport (UK)'
+                name='destination'
+              /><br />
+              <Row className="justify-content-center">
+                <Link to="/results">
+
+                  <Button variant="success" type="submit">
+                    Calculate
+                  </Button>
+
+                </Link>
+              </Row>
+            </Form>
+          </Row>
+        </Container>
       </div>
+
     );
   }
 }
