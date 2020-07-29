@@ -12,7 +12,7 @@ export default class TrainForm extends React.Component {
       <div>
         <Container>
           <Row className="justify-content-center">
-            <h1 id="plane">Train Journey Calculator</h1>
+            <h1 id="plane">Train Travel Calculator</h1>
           </Row>
 
           <div className="links animate__animated animate__zoomIn">
