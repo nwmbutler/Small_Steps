@@ -114,7 +114,7 @@ export default class About extends React.Component {
             Small Steps team bring our dream into reality. He has succeeded in ensuring that our Heroku production environment is as 
             successful as our development environment.</p>
 
-        <h2><a href='https://github.com/RichEwin'></a>Richard Ewin-Lambert</h2>
+        <h2><a href='https://github.com/RichEwin'>Richard Ewin-Lambert</a></h2>
 
           <p>Rich joined Small Steps from his role as a Technical Recruiter at Facebook, hiring some of the brightest Production Engineers 
             of the 20th Century whilst consistently developing his own and his team’s recruitment skills. Since joining Makers, he’s 
