@@ -54,12 +54,11 @@ export default class App extends React.Component {
       console.log(description)
   }
 
-
-
   handleInputChange3 = (description) => {
     this.setState({
       destination: description
     });
+    console.log(description)
   }
 
 
@@ -119,6 +118,7 @@ export default class App extends React.Component {
                 handleSubmit={this.handleSubmit}
                 handleInputChange={this.handleInputChange}
                 handleInputChange2={this.handleInputChange2}
+                handleInputChange3={this.handleInputChange3}
               />
             </Route>
             <Route exact path="/plane">

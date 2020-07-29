@@ -28,7 +28,7 @@ const AutoCompleteDestination = (input_params) => {
 
   const handleSelect = ({ description }) => () => {
     setValue(description, false);
-    // input_params.origin_result3(description)
+    input_params.origin_result3(description)
     clearSuggestions();
 
     getGeocode({ address: description })
