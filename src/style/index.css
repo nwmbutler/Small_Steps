@@ -94,3 +94,7 @@ code {
   display: flex;
   justify-content: center;
 }
+
+#plcholder {
+  text-align: center;
+}

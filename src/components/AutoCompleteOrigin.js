@@ -63,7 +63,7 @@ const AutoCompleteOrigin = (input_params) => {
       <input
         size="50"
         type='text'
-        minLength={5}
+       id = 'plcholder'
         placeholder={input_params.placeholder}
         value={value}
         onChange={handleInput}

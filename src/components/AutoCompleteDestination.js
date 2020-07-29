@@ -57,13 +57,13 @@ const AutoCompleteDestination = (input_params) => {
     });
 
   return (
-    <div
+    <div 
 
       ref={ref}>
-      <input
+      <input id = 'plcholder'
         size="50"
         type='text'
-        minlength='1'
+        
         placeholder={input_params.placeholder}
         value={value}
         onChange={handleInput}
