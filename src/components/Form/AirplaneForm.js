@@ -8,7 +8,6 @@ export default class AirplaneForm extends React.Component {
   render() {
     return (
       <div>
-
       <h2>Carbon Calculator</h2>
 
       <Form class="calculator">
