@@ -23,8 +23,11 @@ code {
   position: center;
 }
 .buttonLink {
-  padding-left: 25px;
-  padding-right: 25px;
+  background-color: rgb(238, 234, 223);
+  padding: 10px 30px;
+  /* padding-left: 30px;
+  padding-right: 30px;
+  padding-bottom: 10px; */
   margin: 30px;
   border-radius: 100px;
 }
@@ -52,7 +55,7 @@ code {
   margin: 100px;
 }
 .colorNav {
-  background-color: rgba(218, 202, 154, 0.336);
+  background-color: rgba(236, 233, 222, 0.336);
   height: 60px;
 }
 .copyright {
@@ -79,8 +82,20 @@ code {
   margin-bottom: 40px;
 }
 
-#icon {
-  color: rgb(51, 13, 219);
+#iconC {
+  color: rgb(172, 112, 44);
+}
+
+#iconP {
+  color: rgb(44, 121, 172);
+}
+
+#iconB {
+  color: rgb(44, 172, 119);
+}
+
+#iconT {
+  color: rgb(172, 44, 44);
 }
 
 #displayResult {
