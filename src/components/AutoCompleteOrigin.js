@@ -61,11 +61,11 @@ const AutoCompleteOrigin = (input_params) => {
     ref={ref}>
       <input
       size="50"
-      placeholder="Choose Departure Point"
+      placeholder={input_params.placeholder}
       value={value}
       onChange={handleInput}
       disabled={!ready}
-      name = "origin"
+      name = {input_params.name}
       />
       {status === "OK" && <ul>{renderSuggestions()}</ul>}
     </div>

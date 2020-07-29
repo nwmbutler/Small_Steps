@@ -39,7 +39,7 @@ export default class App extends React.Component {
     this.setState({
       [e.target.name]: e.target.value,
     });
-    // alert(this.state.origin)
+    // alert(this.state.destination)
 
     this.setState({
       mode: window.location.pathname.substr(1),
@@ -51,7 +51,17 @@ export default class App extends React.Component {
     this.setState({
       origin: description
     });
+      console.log(description)
   }
+
+
+
+  handleInputChange3 = (description) => {
+    this.setState({
+      destination: description
+    });
+  }
+
 
   handleSubmit = (e) => {
     const { origin, destination, mode } = this.state;

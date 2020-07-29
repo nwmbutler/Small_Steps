@@ -15,9 +15,16 @@ export default class CarForm extends React.Component {
         <AutoCompleteOrigin
         origin_result1 = {this.props.handleInputChange}
         origin_result2 = {this.props.handleInputChange2}
+        placeholder = 'Test'
+        name = 'origin'
         /><br />
 
-        <AutoCompleteDestination destination_result = {this.props.handleInputChange}/><br />
+        <AutoCompleteDestination
+      origin_result1 = {this.props.handleInputChange}
+      
+      placeholder = 'Test2'
+      name = 'destination'
+      /><br />
 
         <Link to="/results">
 

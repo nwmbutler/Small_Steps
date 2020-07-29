@@ -5,7 +5,7 @@ import usePlacesAutocomplete, {
   getLatLng,
 } from "use-places-autocomplete";
 
-const AutoCompleteDestination = (destination_result) => {
+const AutoCompleteDestination = (input_params) => {
   const {
     ready,
     value,
@@ -23,11 +23,12 @@ const AutoCompleteDestination = (destination_result) => {
 
   const handleInput = (e) => {
     setValue(e.target.value);
-    destination_result.destination_result(e)
+    input_params.origin_result1(e)
   };
 
   const handleSelect = ({ description }) => () => {
     setValue(description, false);
+    // input_params.origin_result3(description)
     clearSuggestions();
 
     getGeocode({ address: description })
@@ -48,20 +49,23 @@ const AutoCompleteDestination = (destination_result) => {
       } = suggestion;
 
       return (
-        <ul key={id} onClick={handleSelect(suggestion)}>
+        <li key={id} onClick={handleSelect(suggestion)}>
           <strong>{main_text}</strong> <small>{secondary_text}</small>
-        </ul>
+        </li>
       );
     });
 
   return (
-    <div ref={ref}>
+    <div
+
+    ref={ref}>
       <input
-        placeholder="Choose Arrival Point"
-        value={value}
-        onChange={handleInput}
-        disabled={!ready}
-        name = "destination"
+      size="50"
+      placeholder={input_params.placeholder}
+      value={value}
+      onChange={handleInput}
+      disabled={!ready}
+      name = {input_params.name}
       />
       {status === "OK" && <ul>{renderSuggestions()}</ul>}
     </div>
