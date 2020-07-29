@@ -11,9 +11,11 @@ export default class TrainForm extends React.Component {
     return (
       <div>
         <Container>
+        <div className="links animate__animated animate__zoomIn">
           <Row className="justify-content-center">
             <h1 id="plane">Train Journey Calculator</h1>
           </Row>
+          </div>
 
           <div className="links animate__animated animate__zoomIn">
 
