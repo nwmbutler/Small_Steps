@@ -1,6 +1,7 @@
 import React from 'react';
 import Button from 'react-bootstrap/Button';
 import Container from 'react-bootstrap/Container';
+import Row from 'react-bootstrap/Row';
 import { Link } from 'react-router-dom';
 export default class DisplayResults extends React.Component {
   constructor(props) {
@@ -19,23 +20,25 @@ export default class DisplayResults extends React.Component {
     return (
       <div class="display">
         <Container>
-          <Link to="/">
-            <Button variant="success">New Journey</Button>
-          </Link>
-        </Container>
-        <br />
-        <Container>
-          <Link to="/alternatives">
-            <Button variant="success">See Alternatives</Button>
-          </Link>
-        </Container>
-        <br />
-        <Container>
-          <div>
-            <span class="d-block bg-white">
-              Your carbon footprint: {this.props.result}
-            </span>
-          </div>
+          <Row className="justify-content-center">
+            <div>
+              <span class="d-block bg-white">
+                Your carbon footprint: {this.props.result}
+              </span>
+            </div>
+          </Row>
+
+          <Row className="justify-content-center">
+            <Link to="/">
+              <Button variant="success">New Journey</Button>
+            </Link>
+          </Row>
+
+          <Row className="justify-content-center">
+            <Link to="/alternatives">
+              <Button variant="success">See Alternatives</Button>
+            </Link>
+          </Row>
         </Container>
       </div>
     );
