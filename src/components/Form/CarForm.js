@@ -8,7 +8,22 @@ export default class CarForm extends React.Component {
   render() {
     return (
       <div>
-        <h2>Carbon Calculator</h2>
+        <div>
+        <h2>Car Calculator</h2>
+      <ul>
+     
+      <li>
+        <Link to="/plane">Plane</Link>
+      </li>
+      <li>
+        <Link to="/bus">Bus</Link>
+      </li>
+      <li>
+        <Link to="/train">Train</Link>
+      </li>
+    </ul>
+    </div>
+        
 
         <Form class="calculator">
 

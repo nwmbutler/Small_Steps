@@ -9,8 +9,20 @@ export default class TrainForm extends React.Component {
     return (
       <div>
 
-        <h2>Carbon Calculator</h2>
-
+        <h2>Train Calculator</h2>
+        <div>
+          <ul>
+            <li>
+              <Link to="/bus">bus</Link>
+            </li>
+            <li>
+              <Link to="/driving">Car</Link>
+            </li>
+            <li>
+              <Link to="/plane">Train</Link>
+            </li>
+          </ul>
+        </div>
         <Form class="calculator">
 
         <AutoCompleteOrigin

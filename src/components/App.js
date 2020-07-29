@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import axios from 'axios';
 import CarForm from './Form/CarForm';
 import AlternativesForm from './AlternativesForm.js';
@@ -102,21 +102,9 @@ export default class App extends React.Component {
   render() {
     return (
       <Router>
+
         <div>
-          <ul>
-            <li>
-              <Link to="/driving">Car</Link>
-            </li>
-            <li>
-              <Link to="/plane">Plane</Link>
-            </li>
-            <li>
-              <Link to="/bus">Bus</Link>
-            </li>
-            <li>
-              <Link to="/train">Train</Link>
-            </li>
-          </ul>
+        
 
           <Switch>
             <Route exact path="/">

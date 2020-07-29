@@ -8,8 +8,20 @@ export default class AirplaneForm extends React.Component {
   render() {
     return (
       <div>
-      <h2>Carbon Calculator</h2>
-
+      <h2>Plane Calculator</h2>
+      <div>
+          <ul>
+            <li>
+              <Link to="/bus">bus</Link>
+            </li>
+            <li>
+              <Link to="/driving">Car</Link>
+            </li>
+            <li>
+              <Link to="/train">Train</Link>
+            </li>
+          </ul>
+        </div>
       <Form class="calculator">
 
       <AutoCompleteOrigin
