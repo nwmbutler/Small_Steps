@@ -12,9 +12,12 @@ export default class CarForm extends React.Component {
 
         <Form class="calculator">
 
-        <AutoCompleteOrigin origin_result = {this.props.handleInputChange}/>
+        <AutoCompleteOrigin
+        origin_result1 = {this.props.handleInputChange}
+        origin_result2 = {this.props.handleInputChange2}
+        /><br />
 
-        <AutoCompleteDestination destination_result = {this.props.handleInputChange}/>
+        <AutoCompleteDestination destination_result = {this.props.handleInputChange}/><br />
 
         <Link to="/results">
 

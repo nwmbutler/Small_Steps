@@ -47,6 +47,12 @@ export default class App extends React.Component {
 
   };
 
+  handleInputChange2 = (description) => {
+    this.setState({
+      origin: description
+    });
+  }
+
   handleSubmit = (e) => {
     const { origin, destination, mode } = this.state;
 
@@ -102,6 +108,7 @@ export default class App extends React.Component {
               <CarForm
                 handleSubmit={this.handleSubmit}
                 handleInputChange={this.handleInputChange}
+                handleInputChange2={this.handleInputChange2}
               />
             </Route>
             <Route exact path="/plane">
