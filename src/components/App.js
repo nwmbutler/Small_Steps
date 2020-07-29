@@ -123,8 +123,10 @@ export default class App extends React.Component {
             </Route>
             <Route exact path="/plane">
               <AirplaneForm
-                handleSubmit={this.handleSubmit}
-                handleInputChange={this.handleInputChange}
+              handleSubmit={this.handleSubmit}
+              handleInputChange={this.handleInputChange}
+              handleInputChange2={this.handleInputChange2}
+              handleInputChange3={this.handleInputChange3}
               />
             </Route>
             <Route exact path="/train">

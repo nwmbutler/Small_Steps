@@ -1,6 +1,7 @@
 import React from 'react';
 import Button from 'react-bootstrap/Button';
 import { Form } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 import AutoCompleteOrigin from '../AutoCompleteOrigin'
 import AutoCompleteDestination from '../AutoCompleteDestination'
 export default class AirplaneForm extends React.Component {
@@ -26,9 +27,14 @@ export default class AirplaneForm extends React.Component {
     name = 'destination'
     /><br />
 
+        <Link to="/results">
+
           <Button variant="success" type="submit">
             Calculate
           </Button>
+
+            </Link>
+
         </Form>
       </div>
     );
