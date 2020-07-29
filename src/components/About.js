@@ -100,6 +100,51 @@ export default class About extends React.Component {
             <p>The primary aim of Small Steps is to raise awareness of the carbon emissions associated with travelling, but we 
               have also linked to a carbon-offsetting site. The Woodland Trust allows you to donate money to contribute to tree-planting 
               schemes that will help to off-set the impact of your journey.</p>
+            <br/>
+            <br/>
+        <h1>About the Team</h1>
+
+          <p>We are a team of junior developers at Makers Academy Coding Bootcamp in London; we all started the full-time course 
+            in May 2020, and Small Steps is our final project.</p>
+
+        <h2><a href ='https://github.com/nwmbutler'>Nick Butler</a></h2>
+          
+          <p>Before joining the Small Steps team, Nick had an illustrious career in Technical Theatre and was key in helping to realise 
+            the ideas and inspirations of talented designers. He left it all behind to join Makers Academy in May 2020 and helped the 
+            Small Steps team bring our dream into reality. He has succeeded in ensuring that our Heroku production environment is as 
+            successful as our development environment.</p>
+
+        <h2><a href='https://github.com/RichEwin'></a>Richard Ewin-Lambert</h2>
+
+          <p>Rich joined Small Steps from his role as a Technical Recruiter at Facebook, hiring some of the brightest Production Engineers 
+            of the 20th Century whilst consistently developing his own and his team’s recruitment skills. Since joining Makers, he’s 
+            participated in numerous projects (including creating a Facebook clone) and has become adept at making API calls during his 
+            time at Small Steps.</p>
+
+        <h2><a href='https://github.com/NikitaDouglas'>Nikita Douglas</a></h2>
+
+          <p>Nikita worked as a Graduate Operations Analyst at Cleo AI before joining Small Steps. At Cleo, Nikita focussed on improving 
+            the User Experience of customers accessing help materials, and continued to improve this skill at Small Steps by focusing on the UX of the 
+            site, creating flow charts to understand the user journey and using their skills as a wordsmith to do ‘the word stuff’.</p>
+
+        <h2><a href='https://github.com/perrinjack'>Jack Perrin</a></h2>
+
+          <p>Jack is an engineering graduate from the University of Bristol; after graduating he travelled the world before settling 
+            on Makers Academy as the next step in his career. He has brought a lot of technical tenacity to the Small Steps team, helping us all 
+            to navigate and understand the intricacies of React.js and taking pride in the performance and quality of the code he writes.</p>
+
+        <h2><a href ='https://github.com/minsiyang'>Minsi Yang</a></h2>
+
+          <p>Minsi worked as a freelance violinist and teacher before joining Small Steps - she has performed with the Philharmonia Orchestra, 
+            the BBC Scottish Orchestra, Opera North, and Scottish Opera. She decided to join Makers in 2020 and make the switch to software development; 
+            at Small Steps, she has excelled in front-end design, bringing an artistic eye to the site’s visuals, and handling the front-end code with 
+            confidence and flair.</p>
+
+        <h2><a href ='https://github.com/sophiewo'>...with Sophie Worsnop as front-end advisor</a></h2>
+
+          <p>For the past ten years, Sophie has studied and worked in architecture, before joining the Small Steps team as our front-end 
+          advisor. Her excellent diagramming skills and knowledge of Bootstrap.js paved the way for the glorious app design that you see today.</p>
+
       </Container>
     </div>
   }
