@@ -60,16 +60,18 @@ const AutoCompleteOrigin = (input_params) => {
     <div
 
       ref={ref}>
-      <input
-        size="50"
-        type='text'
-       id = 'plcholder'
-        placeholder={input_params.placeholder}
-        value={value}
-        onChange={handleInput}
-        disabled={!ready}
-        name={input_params.name}
-      />
+     
+        <input
+          id="plcholder"
+          class="form-control"
+          type="text"
+          placeholder={input_params.placeholder}
+          value={value}
+          onChange={handleInput}
+          disabled={!ready}
+          name={input_params.name}
+        ></input>
+      
       {status === "OK" && <ListGroup>{renderSuggestions()}</ListGroup>}
     </div>
   );

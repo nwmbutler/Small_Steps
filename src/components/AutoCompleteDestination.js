@@ -63,7 +63,7 @@ const AutoCompleteDestination = (input_params) => {
       <input id = 'plcholder'
         size="50"
         type='text'
-        
+        class="form-control"
         placeholder={input_params.placeholder}
         value={value}
         onChange={handleInput}
@@ -76,3 +76,4 @@ const AutoCompleteDestination = (input_params) => {
 };
 
 export default AutoCompleteDestination;
+

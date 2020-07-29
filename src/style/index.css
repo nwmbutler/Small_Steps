@@ -110,3 +110,10 @@ code {
 #plcholder {
   text-align: center;
 }
+
+.delay {
+  animation-delay: 0.4s;
+}
+input {
+  border-color: #ffffff;
+}

@@ -31,11 +31,12 @@ export default class DisplayResults extends React.Component {
         </Container>
         <br />
         <Container>
-          <div>
+           {this.props.result && (
+          <div className = "links animate__animated animate__fadeIn " >
             <span class="d-block bg-white">
               Your carbon footprint: {this.props.result}
             </span>
-          </div>
+          </div>)}
         </Container>
       </div>
     );

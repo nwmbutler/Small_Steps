@@ -34,11 +34,12 @@ export default class DisplayResults2 extends React.Component {
             </span>
           </div>
         <Container>
-          <div>
+          {this.props.result && (
+          <div className = "links animate__animated animate__fadeIn " >
             <span class="d-block bg-white">
               Your carbon new footprint is: {this.props.result}
             </span>
-          </div>
+          </div>)}
         </Container>
         <Container>
           <a href = 'https://www.woodlandtrust.org.uk/support-us/give/donations/'>

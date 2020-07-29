@@ -23,7 +23,7 @@ export default class App extends React.Component {
       destination: '',
       mode: window.location.pathname,
       transit_mode: null,
-      currentEmissionResult: '',
+      currentEmissionResult: null,
       originalEmissionResult: null,
 
     };
@@ -95,6 +95,7 @@ export default class App extends React.Component {
     };
     this.setState({
       originalEmissionResult: this.state.currentEmissionResult,
+      currentEmissionResult: null
     });
     // alert(this.state.originalEmissionResult);
     this.callAPI(journey, `${url}/transportAlternative`);
