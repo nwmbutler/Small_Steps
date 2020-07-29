@@ -9,38 +9,36 @@ export default class AirplaneForm extends React.Component {
     return (
       <div>
         <Container>
-        <Row className="justify-content-center">
-          <h1 id="plane">
-            Welcome To Carbon footprint
-          </h1>
-        </Row>
-        
-        {/* <div className="links animate__animated animate__zoomIn"> */}
-          
-            <Row className="justify-content-center">
-              <Link to="/driving">
+          <Row className="justify-content-center">
+            <h1 id="plane">Welcome To Carbon footprint</h1>
+          </Row>
+
+          {/* <div className="links animate__animated animate__zoomIn"> */}
+
+          <Row className="justify-content-center">
+            <Link to="/driving">
               <Button className="buttonLink " variant="light">
-              <i class="fa fa-car fa-2x" id = 'icon' aria-hidden="true" ></i>
+                <i class="fa fa-car fa-2x" id="icon" aria-hidden="true"></i>
               </Button>
-              </Link>
-              <Link to="/plane">
-                <Button className="buttonLink" variant="light">
-                  <i class="fa fa-plane fa-2x" id= 'icon' aria-hidden="true"></i>
-                </Button>
-              </Link>
-              <Link to="/bus">
-                <Button className="buttonLink" variant="light">
-                <i class="fa fa-bus fa-2x" id = 'icon' aria-hidden="true"></i>
-                </Button>
-              </Link>
-              <Link to="/train">
-                <Button className="buttonLink" variant="light">
-                <i class="fa fa-train fa-2x" id = 'icon' aria-hidden="true"></i>
-                </Button>
-              </Link>
-            </Row>
-          </Container>
-          
+            </Link>
+            <Link to="/plane">
+              <Button className="buttonLink" variant="light">
+                <i class="fa fa-plane fa-2x" id="icon" aria-hidden="true"></i>
+              </Button>
+            </Link>
+            <Link to="/bus">
+              <Button className="buttonLink" variant="light">
+                <i class="fa fa-bus fa-2x" id="icon" aria-hidden="true"></i>
+              </Button>
+            </Link>
+            <Link to="/train">
+              <Button className="buttonLink" variant="light">
+                <i class="fa fa-train fa-2x" id="icon" aria-hidden="true"></i>
+              </Button>
+            </Link>
+          </Row>
+        </Container>
+
         {/* </div> */}
       </div>
     );
