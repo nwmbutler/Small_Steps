@@ -24,6 +24,8 @@ export default class DisplayResults2 extends React.Component {
             <Button variant="success">New Journey</Button>
           </Link>
         </Container>
+
+        
         <br />
         <br />
         <div>
@@ -37,6 +39,11 @@ export default class DisplayResults2 extends React.Component {
               Your carbon new footprint is: {this.props.result}
             </span>
           </div>
+        </Container>
+        <Container>
+          <a href = 'https://www.woodlandtrust.org.uk/support-us/give/donations/'>
+            <Button variant="success">Donate</Button>
+          </a>
         </Container>
       </div>
     );
