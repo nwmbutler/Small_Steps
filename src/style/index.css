@@ -29,6 +29,14 @@ input:-webkit-autofill,
    -webkit-box-shadow: 0 0 0px 1000px #ffffff inset !important;
  }
 
+.origin {
+  width: 20rem;
+}
+
+.destination {
+  width: 20rem;
+}
+
 .links {
   position: center;
 }
@@ -88,6 +96,10 @@ input:-webkit-autofill,
 .alternative {
   display: flex;
   justify-content: center;
+}
+
+#dtext {
+  text-align: center;
 }
 
 #formAlt {

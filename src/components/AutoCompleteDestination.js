@@ -2,6 +2,7 @@ import React from "react";
 import ListGroup from 'react-bootstrap/ListGroup';
 import useOnclickOutside from "react-cool-onclickoutside";
 import Form from 'react-bootstrap/Form';
+import Row from "react-bootstrap/Row";
 import usePlacesAutocomplete, {
   getGeocode,
   getLatLng,
@@ -61,19 +62,22 @@ const AutoCompleteDestination = (input_params) => {
     <div
 
       ref={ref}>
-      <Form>
-        <Form.Control
-          size="50"
-          type='text'
-          minlength='1'
-          placeholder={input_params.placeholder}
-          value={value}
-          onChange={handleInput}
-          disabled={!ready}
-          name={input_params.name}
-        />
-        {status === "OK" && <ListGroup>{renderSuggestions()}</ListGroup>}
-      </Form>
+      <Row className="justify-content-center">
+        <Form className="destination">
+          <Form.Control
+            id="dtext"
+            size="50"
+            type='text'
+            minlength='1'
+            placeholder={input_params.placeholder}
+            value={value}
+            onChange={handleInput}
+            disabled={!ready}
+            name={input_params.name}
+          />
+          {status === "OK" && <ListGroup>{renderSuggestions()}</ListGroup>}
+        </Form>
+      </Row>
     </div>
   );
 };
