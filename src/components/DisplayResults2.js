@@ -21,29 +21,31 @@ export default class DisplayResults2 extends React.Component {
     return (
       <div class="display">
         <Container>
-          <Row className="justify-content-center" id="displayResult">
+          <Row className="justify-content-center animate__animated animate__zoomInDown animate__slow" id="displayResult">
             <span class="d-block bg-white">
               Your carbon old footprint is: {this.props.originalresult}
             </span>
           </Row>
 
-          <Row className="justify-content-center" id="displayResult">
+          <Row className="justify-content-center animate__animated animate__zoomInDown animate__slower" id="displayResult">
             <span class="d-block bg-white">
               Your carbon new footprint is: {this.props.result}
             </span>
           </Row>
 
-          <Row className="justify-content-center" id="displayResult">
+          <Row className="justify-content-center animate__animated animate__zoomIn animate__delay-4s" id="displayResult">
+            <a href='https://www.woodlandtrust.org.uk/support-us/give/donations/' target="_blank" rel="noopener noreferrer">
+              <Button variant="success">Donate</Button>
+            </a>
+          </Row>
+
+          <Row className="justify-content-center animate__animated animate__zoomIn animate__delay-5s" id="displayResult">
             <Link to="/">
               <Button variant="success">New Journey</Button>
             </Link>
           </Row>
 
-          <Row className="justify-content-center" id="displayResult">
-            <a href='https://www.woodlandtrust.org.uk/support-us/give/donations/' target="_blank" rel="noopener noreferrer">
-              <Button variant="success">Donate</Button>
-            </a>
-          </Row>
+
         </Container>
       </div>
     );

@@ -40,7 +40,6 @@ export default class DisplayResults extends React.Component {
             </Link>
           </Row>
 
-
         </Container>
       </div>
     );
