@@ -20,7 +20,7 @@ export default class DisplayResults extends React.Component {
     return (
       <div class="display">
         <Container>
-          <Row className="justify-content-center" id="displayResult">
+          <Row className="justify-content-center animate__animated animate__zoomInDown animate__slow" id="displayResult">
             <div>
               <span class="d-block bg-white">
                 Your carbon footprint: {this.props.result}
@@ -28,17 +28,19 @@ export default class DisplayResults extends React.Component {
             </div>
           </Row>
 
-          <Row className="justify-content-center" id="displayResult">
+          <Row className="justify-content-center animate__animated animate__zoomIn animate__delay-2s" id="displayResult">
+            <Link to="/alternatives">
+              <Button variant="success">See Alternatives</Button>
+            </Link>
+          </Row>
+
+          <Row className="justify-content-center animate__animated animate__zoomIn animate__delay-3s" id="displayResult">
             <Link to="/">
               <Button variant="success">New Journey</Button>
             </Link>
           </Row>
 
-          <Row className="justify-content-center" id="displayResult">
-            <Link to="/alternatives">
-              <Button variant="success">See Alternatives</Button>
-            </Link>
-          </Row>
+
         </Container>
       </div>
     );
