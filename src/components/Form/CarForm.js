@@ -12,7 +12,7 @@ export default class CarForm extends React.Component {
       <div>
         <Container>
           <Row className="justify-content-center">
-            <h1 id="plane">Car Calculator</h1>
+            <h1 id="formHead">Car Travel Calculator</h1>
           </Row>
 
           <div className="links animate__animated animate__zoomIn">
