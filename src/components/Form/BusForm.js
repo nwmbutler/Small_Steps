@@ -20,17 +20,17 @@ export default class BusForm extends React.Component {
             <Row className="justify-content-center">
               <Link to="/plane">
                 <Button className="buttonLinkForm " variant="light">
-                  <i class="fa fa-plane fa-2x" id="icon" aria-hidden="true"></i>
+                  <i class="fa fa-plane fa-2x" id="iconP" aria-hidden="true"></i>
                 </Button>
               </Link>
               <Link to="/driving">
                 <Button className="buttonLinkForm " variant="light">
-                  <i class="fa fa-car fa-2x" id="icon" aria-hidden="true"></i>
+                  <i class="fa fa-car fa-2x" id="iconC" aria-hidden="true"></i>
                 </Button>
               </Link>
               <Link to="/train">
                 <Button className="buttonLinkForm " variant="light">
-                  <i class="fa fa-train fa-2x" id="icon" aria-hidden="true"></i>
+                  <i class="fa fa-train fa-2x" id="iconT" aria-hidden="true"></i>
                 </Button>
               </Link>
             </Row>
