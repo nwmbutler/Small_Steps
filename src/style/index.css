@@ -66,6 +66,11 @@ code {
   display: flex;
   justify-content: center;
 }
+#formAlt {
+  color: rgb(56, 51, 51);
+  font-family: 'Righteous', cursive;
+  margin: 30px;
+}
 
 #formHead {
   color: rgb(56, 51, 51);
