@@ -13,11 +13,39 @@ export default class CarForm extends React.Component {
         <Container>
           <div className="links animate__animated animate__zoomIn">
             <Row className="justify-content-center">
-              <h1 id="formHead">Car Travel Calculator</h1>
+              <h1 id="tformHead">Car Travel Calculator</h1>
             </Row>
           </div>
           <div className="links animate__animated animate__zoomIn">
 
+
+            <Row className="justify-content-center">
+              <Form class="calculator">
+                <AutoCompleteOrigin
+                  origin_result1={this.props.handleInputChange}
+                  origin_result2={this.props.handleInputChange2}
+                  placeholder="Enter Departure Location"
+                  name="origin"
+                />
+                <br />
+
+                <AutoCompleteDestination
+                  origin_result1={this.props.handleInputChange}
+                  origin_result3={this.props.handleInputChange3}
+                  placeholder="Enter Arrival Location"
+                  name="destination"
+                />
+                <br />
+                <Row className="justify-content-center">
+                  <Link to="/results">
+                    <Button variant="success" type="submit" className="justify-content-center">
+                      Calculate Emissions
+                </Button>
+                  </Link>
+                </Row>
+              </Form>
+              <p>Choose another mode of transport:</p>
+            </Row>
             <Row className="justify-content-center">
               <Link to="/plane">
                 <Button className="buttonLinkForm " variant="light">
@@ -34,32 +62,6 @@ export default class CarForm extends React.Component {
                   <i class="fa fa-train fa-2x" id="iconT" aria-hidden="true"></i>
                 </Button>
               </Link>
-            </Row>
-            <Row className="justify-content-center">
-              <Form class="calculator">
-                <AutoCompleteOrigin
-                  origin_result1={this.props.handleInputChange}
-                  origin_result2={this.props.handleInputChange2}
-                  placeholder="Choose Departure Location"
-                  name="origin"
-                />
-                <br />
-
-                <AutoCompleteDestination
-                  origin_result1={this.props.handleInputChange}
-                  origin_result3={this.props.handleInputChange3}
-                  placeholder="Choose Arrival Location"
-                  name="destination"
-                />
-                <br />
-                <Row className="justify-content-center">
-                  <Link to="/results">
-                    <Button variant="success" type="submit" className="justify-content-center">
-                      Calculate
-                </Button>
-                  </Link>
-                </Row>
-              </Form>
             </Row>
           </div>
         </Container>

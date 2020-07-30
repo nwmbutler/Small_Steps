@@ -13,7 +13,7 @@ export default class AirplaneForm extends React.Component {
         <Container>
           <div className="links animate__animated animate__zoomIn">
             <Row className="justify-content-center">
-              <h1 id="formHead">Air Travel Calculator</h1>
+              <h1 id="tformHead">Air Travel Calculator</h1>
             </Row>
           </div>
 
