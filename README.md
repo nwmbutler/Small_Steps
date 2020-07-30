@@ -5,7 +5,7 @@
 
 Snappy line about our app here!!
 
-* [Live on Heroku](https://carbon-front-end.herokuapp.co/)
+* [Live on Heroku](https://carbon-front-end.herokuapp.com/)
 
 
 ## Jump to:
