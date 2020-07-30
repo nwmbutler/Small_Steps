@@ -24,7 +24,7 @@ export default class BusForm extends React.Component {
                 <AutoCompleteOrigin
                   origin_result1={this.props.handleInputChange}
                   origin_result2={this.props.handleInputChange2}
-                  placeholder="Choose Departure Bus Station"
+                  placeholder="Enter Departure Bus Station"
                   name="origin"
                 />
                 <br />
@@ -32,7 +32,7 @@ export default class BusForm extends React.Component {
                 <AutoCompleteDestination
                   origin_result1={this.props.handleInputChange}
                   origin_result3={this.props.handleInputChange3}
-                  placeholder="Choose Arrival Bus station"
+                  placeholder="Enter Arrival Bus station"
                   name="destination"
                 />
                 <br />

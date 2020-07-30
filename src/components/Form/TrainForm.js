@@ -25,14 +25,14 @@ export default class TrainForm extends React.Component {
                 <AutoCompleteOrigin
                   origin_result1={this.props.handleInputChange}
                   origin_result2={this.props.handleInputChange2}
-                  placeholder='Choose Departure Train Station'
+                  placeholder='Enter Departure Train Station'
                   name='origin'
                 /><br />
 
                 <AutoCompleteDestination
                   origin_result1={this.props.handleInputChange}
                   origin_result3={this.props.handleInputChange3}
-                  placeholder='Choose Arrival Train Station'
+                  placeholder='Enter Arrival Train Station'
                   name='destination'
                 /><br />
                 <Row className="justify-content-center">
