@@ -56,8 +56,8 @@ input:-webkit-autofill,
   padding: 10px 25px;
   /* padding-left: 25px;
   padding-right: 25px; */
-  margin-left: 25px;
-  margin-right: 25px;
+  margin-left: 15px;
+  margin-right: 15px;
   margin-bottom: 30px;
   border-radius: 100px;
 }
