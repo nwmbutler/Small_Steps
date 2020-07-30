@@ -2,6 +2,7 @@ import React from 'react';
 import Button from 'react-bootstrap/Button';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
+import Card from 'react-bootstrap/Card';
 import { Link } from 'react-router-dom';
 export default class DisplayResults extends React.Component {
   constructor(props) {
@@ -21,11 +22,12 @@ export default class DisplayResults extends React.Component {
       <div class="display">
         <Container>
           <Row className="justify-content-center animate__animated animate__zoomInDown animate__slow" id="displayResult">
-            <div>
-              <span class="d-block bg-white">
-                Your carbon footprint: {this.props.result}
-              </span>
-            </div>
+            <Card>
+              <Card.Body class="d-block">
+                <strong>Your carbon footprint: </strong>
+                {this.props.result}
+              </Card.Body>
+            </Card>
           </Row>
 
           <Row className="justify-content-center animate__animated animate__zoomIn animate__delay-3s" id="displayResult">

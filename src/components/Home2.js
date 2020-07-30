@@ -17,23 +17,23 @@ export default class AirplaneForm extends React.Component {
 
             <Row className="justify-content-center">
               <Link to="/driving">
-                <Button className="buttonLink " variant="light">
-                  <i class="fa fa-car fa-2x" id="icon" aria-hidden="true"></i>
+                <Button className="buttonLink " variant="light" size="md">
+                  <i class="fa fa-car fa-2x" id="iconC" aria-hidden="true"></i>
                 </Button>
               </Link>
               <Link to="/plane">
-                <Button className="buttonLink" variant="light">
-                  <i class="fa fa-plane fa-2x" id="icon" aria-hidden="true"></i>
+                <Button className="buttonLink" variant="light" size="md">
+                  <i class="fa fa-plane fa-2x" id="iconP" aria-hidden="true"></i>
                 </Button>
               </Link>
               <Link to="/bus">
-                <Button className="buttonLink" variant="light">
-                  <i class="fa fa-bus fa-2x" id="icon" aria-hidden="true"></i>
+                <Button className="buttonLink" variant="light" size="md">
+                  <i class="fa fa-bus fa-2x" id="iconB" aria-hidden="true"></i>
                 </Button>
               </Link>
               <Link to="/train">
-                <Button className="buttonLink" variant="light">
-                  <i class="fa fa-train fa-2x" id="icon" aria-hidden="true"></i>
+                <Button className="buttonLink" variant="light" size="md">
+                  <i class="fa fa-train fa-2x" id="iconT" aria-hidden="true"></i>
                 </Button>
               </Link>
             </Row>
