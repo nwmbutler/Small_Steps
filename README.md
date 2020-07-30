@@ -27,7 +27,7 @@ Small Steps takes the user’s mode of transport, origin, and destination, and m
 
 ![](https://github.com/nwmbutler/Small_Steps/blob/master/public/Screenshot%202020-07-30%20at%2016.30.27.png?raw=true)
 ![](https://github.com/nwmbutler/Small_Steps/blob/master/public/Screenshot%202020-07-30%20at%2016.31.19.png?raw=true)
-![](https://github.com/nwmbutler/Small_Steps/blob/master/public/Screenshot%202020-07-30%20at%2016.30.27.png?raw=true)
+![](https://github.com/nwmbutler/Small_Steps/blob/master/public/Screenshot%202020-07-30%20at%2016.50.34.png?raw=true)
 
 ## Technologies Used
 
