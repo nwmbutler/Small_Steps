@@ -5,6 +5,14 @@
 
 [Deployed Here]()
 
+## Developers
+
+- [Nick Butler](https://github.com/nwmbutler)
+- [Nikita Douglas](https://https://github.com/NikitaDouglas)
+- [Rich Ewin](https://github.com/RichEwin)
+- [Jack Perrin](https://https://github.com/perrinjack)
+- [Minsi Yang](https://https://https://github.com/minsiyang)
+
 ## The Mission
 
 As a team we decided to focus on a product that raised awareness of current environmental issues and have built a carbon footprint calculator for holidaymakers.
@@ -15,16 +23,7 @@ Small Steps takes the user’s mode of transport, origin, and destination, and m
 
 * [Project Approach](https://github.com/nwmbutler/carbon-front-end/blob/README/approach.md)
 * [How we made our calculations](https://github.com/nwmbutler/carbon-front-end/blob/README/CALCULATIONS.md)
-* [Technologies Used](https://github.com/nwmbutler/carbon-front-end#TechnologiesUsed)
-* [How to Run](https://github.com/nwmbutler/carbon-front-end#HowtoRun)
-
-## Developers
-
-- [Nick Butler](https://github.com/nwmbutler)
-- [Nikita Douglas](https://https://github.com/NikitaDouglas)
-- [Rich Ewin](https://github.com/RichEwin)
-- [Jack Perrin](https://https://github.com/perrinjack)
-- [Minsi Yang](https://https://https://github.com/minsiyang)
+* [Back-End repository](https://github.com/nwmbutler/carbon-back-end)
 
 ## Technologies Used
 
@@ -43,8 +42,8 @@ Small Steps takes the user’s mode of transport, origin, and destination, and m
 
 ## How to Run
 
-### This repo needs cloning and running for the back end to work correctly.
-[Back End repository](https://github.com/nwmbutler/carbon-back-end)
+### This repo needs cloning and running for the back-end to work correctly.
+[Back-End repository](https://github.com/nwmbutler/carbon-back-end)
 
 ```
 clone this repo
