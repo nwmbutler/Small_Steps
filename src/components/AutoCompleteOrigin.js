@@ -63,23 +63,22 @@ const AutoCompleteOrigin = (input_params) => {
     <div
 
       ref={ref}>
-      <Row className="justify-content-center">
-        <Form className="origin">
-          <Form.Control
-            id="dtext"
-            size="50"
-            type='text'
-            minLength={5}
-            placeholder={input_params.placeholder}
-            value={value}
-            onChange={handleInput}
-            disabled={!ready}
-            name={input_params.name}
-          />
-          {status === "OK" && <ListGroup>{renderSuggestions()}</ListGroup>}
-        </Form>
-      </Row>
-    </div >
+
+     
+        <input
+          id="plcholder"
+          class="form-control"
+          type="text"
+          placeholder={input_params.placeholder}
+          value={value}
+          onChange={handleInput}
+          disabled={!ready}
+          name={input_params.name}
+        ></input>
+      
+      {status === "OK" && <ListGroup>{renderSuggestions()}</ListGroup>}
+    </div>
+
   );
 };
 

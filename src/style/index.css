@@ -60,12 +60,27 @@ input:-webkit-autofill,
   margin-right: 15px;
   margin-bottom: 30px;
   border-radius: 100px;
+  background-color: #28a745;
+  border-color: #28a745;
 }
+.buttonLinkForm:hover{
+  background-color: #1e8d38;
+  border-color: #28a745;
+}
+
+.list-group-item:hover {
+  background-color: rgb(241, 225, 194);
+}
+
+
+
+
 
 .ml-auto {
   padding-right: 80px;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   font-size: 17px;
+
 }
 
 .display {
@@ -155,3 +170,20 @@ margin: 20px;
   box-shadow: none;
   background-color: white !important;
 }
+
+.alternative {
+  display: flex;
+  justify-content: center;
+}
+
+#plcholder {
+  text-align: center;
+}
+
+.delay {
+  animation-delay: 0.4s;
+}
+input {
+  border-color: #ffffff;
+}
+

@@ -59,27 +59,25 @@ const AutoCompleteDestination = (input_params) => {
     });
 
   return (
-    <div
+    <div 
 
       ref={ref}>
-      <Row className="justify-content-center">
-        <Form className="destination">
-          <Form.Control
-            id="dtext"
-            size="50"
-            type='text'
-            minlength='1'
-            placeholder={input_params.placeholder}
-            value={value}
-            onChange={handleInput}
-            disabled={!ready}
-            name={input_params.name}
-          />
-          {status === "OK" && <ListGroup>{renderSuggestions()}</ListGroup>}
-        </Form>
-      </Row>
+
+      <input id = 'plcholder'
+        size="50"
+        type='text'
+        class="form-control"
+        placeholder={input_params.placeholder}
+        value={value}
+        onChange={handleInput}
+        disabled={!ready}
+        name={input_params.name}
+      />
+      {status === "OK" && <ListGroup>{renderSuggestions()}</ListGroup>}
+
     </div>
   );
 };
 
 export default AutoCompleteDestination;
+

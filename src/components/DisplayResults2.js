@@ -25,6 +25,7 @@ export default class DisplayResults2 extends React.Component {
             <span class="d-block bg-white">
               Your carbon old footprint is: {this.props.originalresult}
             </span>
+
           </Row>
 
           <Row className="justify-content-center animate__animated animate__zoomInDown animate__slower" id="displayResult">
@@ -44,6 +45,7 @@ export default class DisplayResults2 extends React.Component {
               <Button variant="success">New Journey</Button>
             </Link>
           </Row>
+
 
 
         </Container>

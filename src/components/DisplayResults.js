@@ -21,11 +21,14 @@ export default class DisplayResults extends React.Component {
     return (
       <div class="display">
         <Container>
+
+
           <Row className="justify-content-center animate__animated animate__zoomInDown animate__slow" id="displayResult">
             <Card>
               <Card.Body class="d-block">
                 <strong>Your carbon footprint: </strong>
                 {this.props.result}
+{this.props.distance}
               </Card.Body>
             </Card>
           </Row>
@@ -41,6 +44,7 @@ export default class DisplayResults extends React.Component {
               <Button variant="success">New Journey</Button>
             </Link>
           </Row>
+
 
         </Container>
       </div>

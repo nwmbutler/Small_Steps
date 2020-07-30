@@ -23,18 +23,23 @@ export default class App extends React.Component {
       destination: '',
       mode: window.location.pathname,
       transit_mode: null,
-      currentEmissionResult: '',
+      currentEmissionResult: null,
       originalEmissionResult: null,
-
+      distance_text : null,
+      duration : null
     };
   }
   async callAPI(new_data, url) {
     const response = await axios.post(url, {
       posted_data: new_data,
     });
-    console.log('Returned data:', response.data.distance);
+    console.log('Returned data:', response.data);
 
-    this.setState({ currentEmissionResult: response.data.distance });
+    this.setState({ currentEmissionResult: response.data.data.emissions,
+      distance_text : response.data.data.distance_text,
+      duration : response.data.data.duration
+     });
+     console.log(this.state.distance_text)
   }
   catch(e) {
     console.log(`Axios request failed: ${e}`);
@@ -95,6 +100,7 @@ export default class App extends React.Component {
     };
     this.setState({
       originalEmissionResult: this.state.currentEmissionResult,
+      currentEmissionResult: null
     });
     // alert(this.state.originalEmissionResult);
     this.callAPI(journey, `${url}/transportAlternative`);
@@ -148,6 +154,9 @@ export default class App extends React.Component {
               <DisplayResults
                 handleSubmit={this.handleSubmit}
                 result={this.state.currentEmissionResult}
+                duration = {this.state.duration}
+                distance = {this.state.distance_text}
+                mode = {this.state.mode}
               />
             </Route>
             <Route exact path="/about">
