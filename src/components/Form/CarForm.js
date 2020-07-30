@@ -40,11 +40,15 @@ export default class CarForm extends React.Component {
                   <Link to="/results">
                     <Button variant="success" type="submit" className="justify-content-center">
                       Calculate Emissions
-                </Button>
+                    </Button>
                   </Link>
                 </Row>
+                <br />
+                <Row className="justify-content-center">
+                  <p id="altFormHead">Choose another mode of transport:</p>
+                </Row>
               </Form>
-              <p>Choose another mode of transport:</p>
+
             </Row>
             <Row className="justify-content-center">
               <Link to="/plane">
