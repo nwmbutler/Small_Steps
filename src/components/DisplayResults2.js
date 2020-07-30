@@ -35,7 +35,7 @@ export default class DisplayResults2 extends React.Component {
           </div>
         <Container>
           {this.props.result && (
-          <div className = "links animate__animated animate__fadeIn " >
+          <div  >
             <span class="d-block bg-white">
               Your carbon new footprint is: {this.props.result}
             </span>
