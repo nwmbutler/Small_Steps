@@ -19,7 +19,7 @@ As a team we decided to focus on a product that raised awareness of current envi
 
 Small Steps takes the user’s mode of transport, origin, and destination, and makes a call to the Google Distance Matrix API to find the distance travelled. It then uses this data to calculate the emissions for the journey in kg CO2e per passenger-km. It also allows the user to see lower-carbon alternatives, real-world equivalents of their journey’s emissions, and it links to a site that allows the user to offset their carbon.
 
-## Jump to:
+## Jump to
 
 * [Project Approach](https://github.com/nwmbutler/carbon-front-end/blob/README/approach.md)
 * [How we made our calculations](https://github.com/nwmbutler/carbon-front-end/blob/README/CALCULATIONS.md)
