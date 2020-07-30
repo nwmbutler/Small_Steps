@@ -10,7 +10,13 @@ export default class AirplaneForm extends React.Component {
       <div>
         <Container>
           <Row className="justify-content-center">
-            <h1 id="formHead">Welcome To Carbon footprint</h1>
+            <h1 id="formHead">Welcome to Small Steps</h1>
+          </Row>
+          <Row className="justify-content-center">
+            <h5 id="formTag">Discover the carbon footprint of your journey, and help to combat climate change.</h5>
+          </Row>
+          <Row className="justify-content-center">
+            <p id="formTag">Choose your mode of transport: </p>
           </Row>
 
           <div className="links animate__animated animate__zoomIn">

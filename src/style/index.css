@@ -1,7 +1,7 @@
 body {
   background-image: linear-gradient(
-      rgba(236, 236, 228, 0.288),
-      rgba(242, 243, 241, 0.329)
+      rgba(236, 236, 228, 0.13),
+      rgba(242, 243, 241, 0.651)
     ),
     url('https://images.unsplash.com/photo-1575062878930-47d59e52a370?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80');
   background-position: center;
@@ -64,7 +64,7 @@ input:-webkit-autofill,
 .ml-auto {
   padding-right: 80px;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-  font-size: 17px;
+  font-size: 22px;
 
 }
 
@@ -98,6 +98,13 @@ input:-webkit-autofill,
   justify-content: center;
 }
 
+#formTag{
+  padding: 30px;
+  padding-bottom: 0;
+  color: rgb(46, 41, 41);
+  font-family: 'Righteous', cursive;
+}
+
 #dtext {
   text-align: center;
 }
@@ -111,8 +118,8 @@ input:-webkit-autofill,
 #formHead {
   color: rgb(56, 51, 51);
   font-family: 'Righteous', cursive;
-  margin: 120px;
-  margin-bottom: 40px;
+  margin-top: 100px;
+  margin-bottom: 0px;
 }
 
 #iconC {
