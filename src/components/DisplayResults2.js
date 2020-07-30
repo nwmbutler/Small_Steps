@@ -25,7 +25,7 @@ export default class DisplayResults2 extends React.Component {
           <Row className="justify-content-center animate__animated animate__zoomInDown animate__slow" id="displayResult">
             <Card>
               <Card.Body class="d-block">
-                <strong>Your carbon old footprint is: </strong>
+                <strong>The carbon footprint of your original journey was: </strong>
                 {this.props.originalresult}
               </Card.Body>
             </Card>
@@ -34,7 +34,7 @@ export default class DisplayResults2 extends React.Component {
           <Row className="justify-content-center animate__animated animate__zoomInDown animate__slower" id="displayResult">
             <Card>
               <Card.Body class="d-block">
-                <strong>Your carbon new footprint is: </strong>
+                <strong>The carbon footprint of your alternative journey is: </strong>
                 {this.props.result}
               </Card.Body>
             </Card>
@@ -42,7 +42,7 @@ export default class DisplayResults2 extends React.Component {
 
           <Row className="justify-content-center animate__animated animate__zoomIn animate__delay-4s" id="displayResult">
             <a href='https://www.woodlandtrust.org.uk/support-us/give/donations/' target="_blank" rel="noopener noreferrer">
-              <Button variant="success">Donate</Button>
+              <Button variant="success">Offset your emissions with the Woodland Trust</Button>
             </a>
           </Row>
 

@@ -38,7 +38,7 @@ export default class App extends React.Component {
     this.setState({ currentEmissionResult: response.data.distance,
     
      });
-     console.log(response.data)
+     console.log(response.data.distance)
   }
   catch(e) {
     console.log(`Axios request failed: ${e}`);

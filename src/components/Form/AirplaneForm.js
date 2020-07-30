@@ -32,7 +32,7 @@ export default class AirplaneForm extends React.Component {
                 <AutoCompleteDestination
                   origin_result1={this.props.handleInputChange}
                   origin_result3={this.props.handleInputChange3}
-                  placeholder="Enter Arrival Airport (UK)"
+                  placeholder="Enter Destination Airport (UK)"
                   name="destination"
                 />
                 <br />

@@ -26,7 +26,7 @@ export default class DisplayResults extends React.Component {
           <Row className="justify-content-center animate__animated animate__zoomInDown animate__slow" id="displayResult">
             <Card>
               <Card.Body class="d-block">
-                <strong>Your carbon footprint: </strong>
+                <strong>Your journey has a carbon footprint of: </strong>
                 {this.props.result}
               </Card.Body>
             </Card>
