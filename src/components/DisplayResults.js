@@ -1,6 +1,8 @@
 import React from 'react';
 import Button from 'react-bootstrap/Button';
 import Container from 'react-bootstrap/Container';
+import Row from 'react-bootstrap/Row';
+import Card from 'react-bootstrap/Card';
 import { Link } from 'react-router-dom';
 export default class DisplayResults extends React.Component {
   constructor(props) {
@@ -19,26 +21,31 @@ export default class DisplayResults extends React.Component {
     return (
       <div class="display">
         <Container>
-          <Link to="/">
-            <Button variant="success">New Journey</Button>
-          </Link>
-        </Container>
-        <br />
-        <Container>
-          <Link to="/alternatives">
-            <Button variant="success">See Alternatives</Button>
-          </Link>
-        </Container>
-        <br />
-        <Container>
-          {this.props.distance}
-          {this.props.result && (
-            <div >
-              <span class="d-block bg-white">
-                Your carbon footprint: {this.props.result}
-              </span>
-            </div>
-          )}
+
+
+          <Row className="justify-content-center animate__animated animate__zoomInDown animate__slow" id="displayResult">
+            <Card>
+              <Card.Body class="d-block">
+                <strong>Your carbon footprint: </strong>
+                {this.props.result}
+{this.props.distance}
+              </Card.Body>
+            </Card>
+          </Row>
+
+          <Row className="justify-content-center animate__animated animate__zoomIn animate__delay-3s" id="displayResult">
+            <Link to="/alternatives">
+              <Button variant="success">See Alternatives</Button>
+            </Link>
+          </Row>
+
+          <Row className="justify-content-center animate__animated animate__zoomIn animate__delay-4s" id="displayResult">
+            <Link to="/">
+              <Button variant="success">New Journey</Button>
+            </Link>
+          </Row>
+
+
         </Container>
       </div>
     );

@@ -1,51 +1,46 @@
 [![Build Status](https://travis-ci.org/nwmbutler/carbon-front-end.svg?branch=master)](https://travis-ci.org/nwmbutler/carbon-front-end)
+[![jest](https://jestjs.io/img/jest-badge.svg)](https://github.com/facebook/jest)
+# SMALL STEPS
+## The Mission
 
-# Carbon Calculator
-travis added
+Snappy line about our app here!!
 
-## Sprint One
-### Day one
-Team one successes
-* Created form in react which dynamically listens to user input and returns as console log.
+* [Live on Heroku](https://carbon-front-end.herokuapp.co/)
 
-Team one blockers
-*
 
-Team two successes
-* Used concurrently dependency to allow simultaneous running of npm start on server and client side.
+## Jump to:
+- [See our approach here](https://github.com/nwmbutler)
+* [Using the code](https://github.com/nwmbutler/carbon-front-end#Usingthiscode)
+* [Technologies](https://github.com/nwmbutler/carbon-front-end#Usingthiscode)
+* [The App in action](https://github.com/nwmbutler/carbon-front-end#Usingthiscode)
 
-Team two blockers
-* Running server and client within the same project tree caused issues with file location and routing.
-* Heroku currently hosts the server side
 
-* Travis change
+## The Mission
 
-### Day two
+Snappy line about our app here!!
 
-Team successes
-* Demonstated MVP successfully
-* Merged team ones work on Api calls   
-* Disassociated the front end and back end
-* Knowledge shared state of current project
+## Developers
 
-Team blockers
-* Adherence to Team charter raised as concern, working patterns addressed and revised - monitor
-* Actions required
+- [Nick Butler](https://github.com/nwmbutler)
+- [Nikita Douglas](https://https://github.com/NikitaDouglas)
+- [Rich Ewin](https://github.com/RichEwin)
+- [Jack Perrin](https://https://github.com/perrinjack)
+- [Minsi Yang](https://https://https://github.com/minsiyang)
 
-# Using this code
+
+## Using this code
 ### This repo needs cloning and running for the back end to work correctly.
-[link to Back End](https://github.com/nwmbutler/carbon-back-end)
+[Back End repository](https://github.com/nwmbutler/carbon-back-end)
 
 ```
 clone this repo
 ```
 ```
-clone
+clone the backend repo
 ```
-[link to Back End](https://github.com/nwmbutler/carbon-back-end) into a
- different directory
+[Back End repository](https://github.com/nwmbutler/carbon-back-end)
 
-### These three instructions are identical, but perform them in backend root first.
+### These three instructions are identical, but perform them in backend root first, followed by the frontend.
 
 * In the root run
 ```
@@ -58,3 +53,14 @@ $ npm start
 * Start script should automatically open a new window with the react app visible,
 if this doesn't open automatically navigate to localhost:3000
 * To see the backend navigate to localhost:5000
+
+### Technologies
+
+- Programming Languages: Javascript, HTML, CSS
+- Web Framework: React
+- Testing Framework: Jest
+- Dependencies: axios, dotenv, express, path, use-places-autocomplete, bootstrap
+
+### The app in action
+
+- lovely screenshots of the app working here!!

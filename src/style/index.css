@@ -18,27 +18,46 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
-#plane {
-  color: rgb(56, 51, 51);
-  font-family: 'Righteous', cursive;
-  margin: 120px;
-  margin-bottom: 40px;
+
+input:-webkit-autofill,
+ input:-webkit-autofill:hover,
+ input:-webkit-autofill:focus textarea:-webkit-autofill,
+ textarea:-webkit-autofill:hover textarea:-webkit-autofill:focus,
+ select:-webkit-autofill,
+ select:-webkit-autofill:hover,
+ select:-webkit-autofill:focus {
+   -webkit-box-shadow: 0 0 0px 1000px #ffffff inset !important;
+ }
+
+.origin {
+  width: 20rem;
 }
+
+.destination {
+  width: 20rem;
+}
+
 .links {
   position: center;
 }
+
 .buttonLink {
-  padding-left: 25px;
-  padding-right: 25px;
+  background-color: rgb(238, 234, 223);
+  padding: 10px 25px;
+  /* padding-left: 30px;
+  padding-right: 30px;
+  padding-bottom: 10px; */
   margin: 30px;
   border-radius: 100px;
 }
 
 .buttonLinkForm {
-  padding-left: 25px;
-  padding-right: 25px;
-  margin-left: 10px;
-  margin-right: 10px;
+  background-color: rgb(238, 234, 223);
+  padding: 10px 25px;
+  /* padding-left: 25px;
+  padding-right: 25px; */
+  margin-left: 15px;
+  margin-right: 15px;
   margin-bottom: 30px;
   border-radius: 100px;
   background-color: #28a745;
@@ -55,16 +74,22 @@ code {
 
 
 
-#icon {
-  color: rgb(51, 13, 219);
+
+
+.ml-auto {
+  padding-right: 80px;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-size: 17px;
+
 }
 
 .display {
-  margin: 30px;
+  margin: 150px;
 }
+
 .d-block {
-  padding: 5px;
-  border-radius: 5px;
+  padding: 50px;
+  border-radius: 10px;
   width: 20em;
   text-align: center;
   margin: 0 auto;
@@ -73,7 +98,7 @@ code {
   margin: 100px;
 }
 .colorNav {
-  background-color: rgba(218, 202, 154, 0.336);
+  background-color: rgba(236, 233, 222, 0.336);
   height: 60px;
 }
 .copyright {
@@ -82,6 +107,49 @@ code {
   bottom: 10px;
   color: white;
 }
+
+.alternative {
+  display: flex;
+  justify-content: center;
+}
+
+#dtext {
+  text-align: center;
+}
+
+#formAlt {
+  color: rgb(56, 51, 51);
+  font-family: 'Righteous', cursive;
+  margin: 30px;
+}
+
+#formHead {
+  color: rgb(56, 51, 51);
+  font-family: 'Righteous', cursive;
+  margin: 120px;
+  margin-bottom: 40px;
+}
+
+#iconC {
+  color: rgb(172, 112, 44);
+}
+
+#iconP {
+  color: rgb(44, 121, 172);
+}
+
+#iconB {
+  color: rgb(44, 172, 119);
+}
+
+#iconT {
+  color: rgb(172, 44, 44);
+}
+
+#displayResult {
+margin: 20px;
+}
+
 #formBasicEmail {
   font-family: Arial, Helvetica, sans-serif;
   width: 20em;
@@ -102,6 +170,7 @@ code {
   box-shadow: none;
   background-color: white !important;
 }
+
 .alternative {
   display: flex;
   justify-content: center;
@@ -117,3 +186,4 @@ code {
 input {
   border-color: #ffffff;
 }
+

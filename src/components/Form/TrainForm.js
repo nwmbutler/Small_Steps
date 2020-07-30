@@ -13,7 +13,7 @@ export default class TrainForm extends React.Component {
         <Container>
         <div className="links animate__animated animate__zoomIn">
           <Row className="justify-content-center">
-            <h1 id="plane">Train Journey Calculator</h1>
+            <h1 id="formHead">Train Travel Calculator</h1>
           </Row>
           </div>
 
@@ -22,17 +22,17 @@ export default class TrainForm extends React.Component {
             <Row className="justify-content-center">
               <Link to="/plane">
                 <Button className="buttonLinkForm " variant="light">
-                  <i class="fa fa-plane fa-2x" id="icon" aria-hidden="true"></i>
+                  <i class="fa fa-plane fa-2x" id="iconP" aria-hidden="true"></i>
                 </Button>
               </Link>
               <Link to="/driving">
                 <Button className="buttonLinkForm " variant="light">
-                  <i class="fa fa-car fa-2x" id="icon" aria-hidden="true"></i>
+                  <i class="fa fa-car fa-2x" id="iconC" aria-hidden="true"></i>
                 </Button>
               </Link>
               <Link to="/bus">
                 <Button className="buttonLinkForm " variant="light">
-                  <i class="fa fa-bus fa-2x" id="icon" aria-hidden="true"></i>
+                  <i class="fa fa-bus fa-2x" id="iconB" aria-hidden="true"></i>
                 </Button>
               </Link>
             </Row>
