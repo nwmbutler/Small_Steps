@@ -33,7 +33,7 @@ Small Steps takes the user’s mode of transport, origin, and destination, and m
 
 | Purpose                      |  Technology        |
 | ---------------------------- | -----------------  |
-| Front end framework          | React              |
+| Front-End framework          | React              |
 | Server framework             | Express            |
 | Programming Languages        | Javascript, HTML   |
 | CI/CD                        | Travis             |
@@ -46,10 +46,10 @@ Small Steps takes the user’s mode of transport, origin, and destination, and m
 
 ## How to Run
 
-### The Backend repository needs to be cloned and run for the front-end to work correctly.
+### The Back-End repository needs to be cloned and run for the Front-End to work correctly.
 
-The Backend repository is available here: 
-[Back-End repository](https://github.com/nwmbutler/carbon-back-end)
+The Back-End repository is available here: 
+[small_steps_backend](https://github.com/nwmbutler/Small_Steps_backend)
 
 ```
 clone the above repo
@@ -74,9 +74,9 @@ $ npm install
 ```
 $ npm start
 ```
-* Start script should automatically open a new window with the frontend app  open and running,
+* Start script should automatically open a new window with the Front-End app  open and running,
 if this doesn't open automatically navigate to localhost:3000
-* To see the backend navigate to localhost:5000
+* To see the Back-End navigate to localhost:5000
 
 ### Testing
 - In the root run
