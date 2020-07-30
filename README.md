@@ -5,8 +5,7 @@
 
 Snappy line about our app here!!
 
-* [Live on Heroku](https://carbon-front-end.herokuapp.co/)
-
+* [Deployed Here](https://carbon-front-end.herokuapp.co/)
 
 ## Jump to:
 - [See our approach here](https://github.com/nwmbutler)
@@ -17,7 +16,7 @@ Snappy line about our app here!!
 
 ## The Mission
 
-Snappy line about our app here!!
+As a team we decided to focus on a product that raised awareness of current environmental issues and have built a carbon footprint calculator. The calculator provides the carbon output of a journey within the UK and offers alternative journeys to the user to reduce the footprint. 
 
 ## Developers
 
@@ -27,8 +26,22 @@ Snappy line about our app here!!
 - [Jack Perrin](https://https://github.com/perrinjack)
 - [Minsi Yang](https://https://https://github.com/minsiyang)
 
+Technologies Used
+
+| Purpose                      |  Technology        |
+| ---------------------------- | -----------------  |
+| Front end framework          | React              |
+| Server framework             | Express            |
+| Language                     | Javascript, HTML   |
+| CI/CD                        | Travis             |
+| Hosting                      | Heroku             |
+| Styling                      | Bootstrap, CSS     |
+| Testing Frameworks           | Jest, Enzyme       |
+| Code Coverage                | Jest               |
+
 
 ## Using this code
+
 ### This repo needs cloning and running for the back end to work correctly.
 [Back End repository](https://github.com/nwmbutler/carbon-back-end)
 
