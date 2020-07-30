@@ -35,11 +35,10 @@ export default class App extends React.Component {
     });
     console.log('Returned data:', response.data);
 
-    this.setState({ currentEmissionResult: response.data.data.emissions,
-      distance_text : response.data.data.distance_text,
-      duration : response.data.data.duration
+    this.setState({ currentEmissionResult: response.data.distance,
+    
      });
-     console.log(this.state.distance_text)
+     console.log(response.data)
   }
   catch(e) {
     console.log(`Axios request failed: ${e}`);
