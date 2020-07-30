@@ -31,12 +31,14 @@ export default class DisplayResults extends React.Component {
         </Container>
         <br />
         <Container>
-           {this.props.result && (
-          <div className = "links animate__animated animate__fadeIn " >
-            <span class="d-block bg-white">
-              Your carbon footprint: {this.props.result}
-            </span>
-          </div>)}
+          {this.props.distance}
+          {this.props.result && (
+            <div >
+              <span class="d-block bg-white">
+                Your carbon footprint: {this.props.result}
+              </span>
+            </div>
+          )}
         </Container>
       </div>
     );
