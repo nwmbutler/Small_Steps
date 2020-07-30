@@ -73,8 +73,8 @@ input:-webkit-autofill,
 }
 
 .d-block {
-  padding: 5px;
-  border-radius: 5px;
+  padding: 50px;
+  border-radius: 10px;
   width: 20em;
   text-align: center;
   margin: 0 auto;
