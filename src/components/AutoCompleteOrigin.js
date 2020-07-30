@@ -1,8 +1,7 @@
 import React from "react";
 import useOnclickOutside from "react-cool-onclickoutside";
 import ListGroup from 'react-bootstrap/ListGroup';
-import Row from "react-bootstrap/Row";
-import Form from 'react-bootstrap/Form';
+
 
 import usePlacesAutocomplete, {
   getGeocode,
