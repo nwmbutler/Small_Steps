@@ -20,23 +20,6 @@ export default class TrainForm extends React.Component {
           <div className="links animate__animated animate__zoomIn">
 
             <Row className="justify-content-center">
-              <Link to="/plane">
-                <Button className="buttonLinkForm " variant="light">
-                  <i class="fa fa-plane fa-2x" id="iconP" aria-hidden="true"></i>
-                </Button>
-              </Link>
-              <Link to="/driving">
-                <Button className="buttonLinkForm " variant="light">
-                  <i class="fa fa-car fa-2x" id="iconC" aria-hidden="true"></i>
-                </Button>
-              </Link>
-              <Link to="/bus">
-                <Button className="buttonLinkForm " variant="light">
-                  <i class="fa fa-bus fa-2x" id="iconB" aria-hidden="true"></i>
-                </Button>
-              </Link>
-            </Row>
-            <Row className="justify-content-center">
               <Form class="calculator">
 
                 <AutoCompleteOrigin
@@ -57,10 +40,33 @@ export default class TrainForm extends React.Component {
 
                     <Button variant="success" type="submit">
                       Calculate
-            </Button>
+                    </Button>
                   </Link>
                 </Row>
+
+                <br />
+                <Row className="justify-content-center">
+                  <p id="altFormHead">Choose another mode of transport:</p>
+                </Row>
               </Form>
+            </Row>
+
+            <Row className="justify-content-center">
+              <Link to="/plane">
+                <Button className="buttonLinkForm " variant="light">
+                  <i class="fa fa-plane fa-2x" id="iconP" aria-hidden="true"></i>
+                </Button>
+              </Link>
+              <Link to="/driving">
+                <Button className="buttonLinkForm " variant="light">
+                  <i class="fa fa-car fa-2x" id="iconC" aria-hidden="true"></i>
+                </Button>
+              </Link>
+              <Link to="/bus">
+                <Button className="buttonLinkForm " variant="light">
+                  <i class="fa fa-bus fa-2x" id="iconB" aria-hidden="true"></i>
+                </Button>
+              </Link>
             </Row>
           </div>
         </Container>
