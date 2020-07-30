@@ -18,7 +18,6 @@ export default class CarForm extends React.Component {
           </div>
           <div className="links animate__animated animate__zoomIn">
 
-
             <Row className="justify-content-center">
               <Form class="calculator">
                 <AutoCompleteOrigin
@@ -48,8 +47,8 @@ export default class CarForm extends React.Component {
                   <p id="altFormHead">Choose another mode of transport:</p>
                 </Row>
               </Form>
-
             </Row>
+
             <Row className="justify-content-center">
               <Link to="/plane">
                 <Button className="buttonLinkForm " variant="light">
