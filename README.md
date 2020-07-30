@@ -3,15 +3,15 @@
 
 # Small Steps
 
-* [Live on Heroku](https://carbon-front-end.herokuapp.com/)
+* [Live on Heroku](https://small-steps2020.herokuapp.com/)
 
 ## Developers
 
 - [Nick Butler](https://github.com/nwmbutler)
-- [Nikita Douglas](https://https://github.com/NikitaDouglas)
+- [Nikita Douglas](https://github.com/NikitaDouglas)
 - [Rich Ewin](https://github.com/RichEwin)
-- [Jack Perrin](https://https://github.com/perrinjack)
-- [Minsi Yang](https://https://https://github.com/minsiyang)
+- [Jack Perrin](https://github.com/perrinjack)
+- [Minsi Yang](https://github.com/minsiyang)
 
 ## The Mission
 
@@ -23,7 +23,7 @@ Small Steps takes the user’s mode of transport, origin, and destination, and m
 
 * [Project Approach](https://github.com/nwmbutler/carbon-front-end/blob/README/approach.md)
 * [How we made our calculations](https://github.com/nwmbutler/carbon-front-end/blob/README/CALCULATIONS.md)
-* [Back-End repository](https://github.com/nwmbutler/carbon-back-end)
+* [Back-End repository](https://github.com/nwmbutler/Small_Steps_backend)
 
 ![](https://github.com/nwmbutler/Small_Steps/blob/master/public/Screenshot%202020-07-30%20at%2016.30.27.png?raw=true)
 ![](https://github.com/nwmbutler/Small_Steps/blob/master/public/Screenshot%202020-07-30%20at%2016.31.19.png?raw=true)
@@ -46,27 +46,40 @@ Small Steps takes the user’s mode of transport, origin, and destination, and m
 
 ## How to Run
 
-### This repo needs cloning and running for the back-end to work correctly.
+### The Backend repository needs to be cloned and run for the front-end to work correctly.
+
+The Backend repository is available here: 
 [Back-End repository](https://github.com/nwmbutler/carbon-back-end)
+
+```
+clone the above repo
+```
+- In the root run
+```
+$ npm install
+```
+```
+$ npm start
+```
+
+### Once these steps are complete
 
 ```
 clone this repo
 ```
-```
-clone the backend repo
-```
-[Back End repository](https://github.com/nwmbutler/carbon-back-end)
-
-### These three instructions are identical, but perform them in backend root first, followed by the frontend.
-
 * In the root run
 ```
 $ npm install
 ```
-* In the root run
 ```
 $ npm start
 ```
-* Start script should automatically open a new window with the react app visible,
+* Start script should automatically open a new window with the frontend app  open and running,
 if this doesn't open automatically navigate to localhost:3000
 * To see the backend navigate to localhost:5000
+
+### Testing
+- In the root run
+```
+npm test
+```
