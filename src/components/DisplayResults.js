@@ -3,7 +3,6 @@ import Button from 'react-bootstrap/Button';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Card from 'react-bootstrap/Card';
-import Image from 'react-bootstrap/Image';
 import { Link } from 'react-router-dom';
 export default class DisplayResults extends React.Component {
   constructor(props) {
@@ -26,7 +25,7 @@ export default class DisplayResults extends React.Component {
             <Card>
               <Card.Body class="d-block">
                 <strong>Your carbon footprint: </strong>
-                <Image src={this.props.result} roundedCircle />
+                {this.props.result}
               </Card.Body>
             </Card>
           </Row>
