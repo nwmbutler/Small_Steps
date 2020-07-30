@@ -1,7 +1,7 @@
 body {
   background-image: linear-gradient(
-      rgba(236, 236, 228, 0.288),
-      rgba(242, 243, 241, 0.329)
+      rgba(236, 236, 228, 0.13),
+      rgba(242, 243, 241, 0.651)
     ),
     url('https://images.unsplash.com/photo-1575062878930-47d59e52a370?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80');
   background-position: center;
@@ -30,11 +30,11 @@ input:-webkit-autofill,
  }
 
 .origin {
-  width: 20rem;
+  width: 25rem;
 }
 
 .destination {
-  width: 20rem;
+  width: 25rem;
 }
 
 .links {
@@ -44,9 +44,6 @@ input:-webkit-autofill,
 .buttonLink {
   background-color: rgb(238, 234, 223);
   padding: 10px 25px;
-  /* padding-left: 30px;
-  padding-right: 30px;
-  padding-bottom: 10px; */
   margin: 30px;
   border-radius: 100px;
 }
@@ -54,32 +51,20 @@ input:-webkit-autofill,
 .buttonLinkForm {
   background-color: rgb(238, 234, 223);
   padding: 10px 25px;
-  /* padding-left: 25px;
-  padding-right: 25px; */
   margin-left: 15px;
   margin-right: 15px;
   margin-bottom: 30px;
   border-radius: 100px;
-  background-color: #28a745;
-  border-color: #28a745;
-}
-.buttonLinkForm:hover{
-  background-color: #1e8d38;
-  border-color: #28a745;
 }
 
 .list-group-item:hover {
   background-color: rgb(241, 225, 194);
 }
 
-
-
-
-
 .ml-auto {
   padding-right: 80px;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-  font-size: 17px;
+  font-size: 22px;
 
 }
 
@@ -94,9 +79,7 @@ input:-webkit-autofill,
   text-align: center;
   margin: 0 auto;
 }
-.alternative {
-  margin: 100px;
-}
+
 .colorNav {
   background-color: rgba(236, 233, 222, 0.336);
   height: 60px;
@@ -109,8 +92,16 @@ input:-webkit-autofill,
 }
 
 .alternative {
+  margin: 100px;
   display: flex;
   justify-content: center;
+}
+
+#formTag{
+  padding: 30px;
+  padding-bottom: 0;
+  color: rgb(46, 41, 41);
+  font-family: 'Righteous', cursive;
 }
 
 #dtext {
@@ -126,8 +117,22 @@ input:-webkit-autofill,
 #formHead {
   color: rgb(56, 51, 51);
   font-family: 'Righteous', cursive;
-  margin: 120px;
+  margin-top: 100px;
+  margin-bottom: 0px;
+}
+
+#tformHead {
+  color: rgb(56, 51, 51);
+  font-family: 'Righteous', cursive;
+  margin-top: 100px;
   margin-bottom: 40px;
+}
+
+#altFormHead {
+  color: rgb(56, 51, 51);
+  font-family: 'Righteous', cursive;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 #iconC {
@@ -171,19 +176,15 @@ margin: 20px;
   background-color: white !important;
 }
 
-.alternative {
+/* .alternative {
   display: flex;
   justify-content: center;
-}
+} */
 
-#plcholder {
-  text-align: center;
-}
-
-.delay {
-  animation-delay: 0.4s;
-}
-input {
+/* .delay {
+  animation-delay: 0.4s; */
+/* } */
+/* input {
   border-color: #ffffff;
-}
+} */
 

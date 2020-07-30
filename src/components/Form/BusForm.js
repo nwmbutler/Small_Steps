@@ -11,13 +11,45 @@ export default class BusForm extends React.Component {
     return (
       <div>
         <Container>
-        <div className="links animate__animated animate__zoomIn">
-          <Row className="justify-content-center">
-            <h1 id="formHead">Bus Travel Calculator</h1>
-          </Row>
+          <div className="links animate__animated animate__zoomIn">
+            <Row className="justify-content-center">
+              <h1 id="tformHead">Bus Travel Calculator</h1>
+            </Row>
           </div>
 
           <div className="links animate__animated animate__zoomIn">
+
+            <Row className="justify-content-center">
+              <Form class="calculator">
+                <AutoCompleteOrigin
+                  origin_result1={this.props.handleInputChange}
+                  origin_result2={this.props.handleInputChange2}
+                  placeholder="Enter Departure Bus Station"
+                  name="origin"
+                />
+                <br />
+
+                <AutoCompleteDestination
+                  origin_result1={this.props.handleInputChange}
+                  origin_result3={this.props.handleInputChange3}
+                  placeholder="Enter Arrival Bus Station"
+                  name="destination"
+                />
+                <br />
+                <Row className="justify-content-center">
+                  <Link to="/results">
+                    <Button variant="success" type="submit">
+                      Calculate
+                    </Button>
+                  </Link>
+                </Row>
+
+                <br />
+                <Row className="justify-content-center">
+                  <p id="altFormHead">Choose another mode of transport:</p>
+                </Row>
+              </Form>
+            </Row>
 
             <Row className="justify-content-center">
               <Link to="/plane">
@@ -36,32 +68,7 @@ export default class BusForm extends React.Component {
                 </Button>
               </Link>
             </Row>
-            <Row className="justify-content-center">
-              <Form class="calculator">
-                <AutoCompleteOrigin
-                  origin_result1={this.props.handleInputChange}
-                  origin_result2={this.props.handleInputChange2}
-                  placeholder="Choose Departure Bus Station"
-                  name="origin"
-                />
-                <br />
 
-                <AutoCompleteDestination
-                  origin_result1={this.props.handleInputChange}
-                  origin_result3={this.props.handleInputChange3}
-                  placeholder="Choose Arrival Bus station"
-                  name="destination"
-                />
-                <br />
-                <Row className="justify-content-center">
-                  <Link to="/results">
-                    <Button variant="success" type="submit">
-                      Calculate
-            </Button>
-                  </Link>
-                </Row>
-              </Form>
-            </Row>
           </div>
         </Container>
       </div>

@@ -28,7 +28,6 @@ export default class DisplayResults extends React.Component {
               <Card.Body class="d-block">
                 <strong>Your carbon footprint: </strong>
                 {this.props.result}
-                {this.props.distance}
               </Card.Body>
             </Card>
           </Row>
