@@ -43,6 +43,8 @@ export default class AirplaneForm extends React.Component {
                     </Button>
                   </Link>
                 </Row>
+
+                <br />
                 <Row className="justify-content-center">
                   <p id="altFormHead">Choose another mode of transport:</p>
                 </Row>

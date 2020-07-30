@@ -42,6 +42,7 @@ export default class CarForm extends React.Component {
                     </Button>
                   </Link>
                 </Row>
+
                 <br />
                 <Row className="justify-content-center">
                   <p id="altFormHead">Choose another mode of transport:</p>
