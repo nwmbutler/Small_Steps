@@ -7,14 +7,16 @@
 
 ## The Mission
 
-As a team we decided to focus on a product that raised awareness of current environmental issues and have built a carbon footprint calculator. The calculator provides the carbon output of a journey within the UK and offers alternative journeys to the user to reduce the footprint. 
+As a team we decided to focus on a product that raised awareness of current environmental issues and have built a carbon footprint calculator for holidaymakers.
+
+Small Steps takes the user’s mode of transport, origin, and destination, and makes a call to the Google Distance Matrix API to find the distance travelled. It then uses this data to calculate the emissions for the journey in kg CO2e per passenger-km. It also allows the user to see lower-carbon alternatives, real-world equivalents of their journey’s emissions, and it links to a site that allows the user to offset their carbon.
 
 ## Jump to:
 
-* [See our approach here](https://github.com/nwmbutler)
-* [Technologies](https://github.com/nwmbutler/carbon-front-end#Usingthiscode)
-* [How to Run](https://github.com/nwmbutler/carbon-front-end#Usingthiscode)
-* [The App in action](https://github.com/nwmbutler/carbon-front-end#Usingthiscode)
+* [Project Approach](https://github.com/nwmbutler/carbon-front-end/blob/README/approach.md)
+* [How we made our calculations](https://github.com/nwmbutler/carbon-front-end/blob/README/CALCULATIONS.md)
+* [Technologies Used](https://github.com/nwmbutler/carbon-front-end#TechnologiesUsed)
+* [How to Run](https://github.com/nwmbutler/carbon-front-end#HowtoRun)
 
 ## Developers
 
@@ -65,4 +67,3 @@ $ npm start
 * Start script should automatically open a new window with the react app visible,
 if this doesn't open automatically navigate to localhost:3000
 * To see the backend navigate to localhost:5000
-
