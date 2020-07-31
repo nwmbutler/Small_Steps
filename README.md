@@ -15,7 +15,7 @@
 
 ## The Mission
 
-As a team we decided to focus on a product that raised awareness of current environmental issues and have built a carbon footprint calculator for holidaymakers.
+As a team we decided to focus on a product that raised awareness of current environmental issues and have built a carbon footprint calculator for people who travel.
 
 Small Steps takes the user’s mode of transport, origin, and destination, and makes a call to the Google Distance Matrix API to find the distance travelled. It then uses this data to calculate the emissions for the journey in kg CO2e per passenger-km. It also allows the user to see lower-carbon alternatives, real-world equivalents of their journey’s emissions, and it links to a site that allows the user to offset their carbon.
 
